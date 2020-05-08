@@ -1,0 +1,1803 @@
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <link rel="canonical" href="https://www.comp.nus.edu.sg/~ooiwt/cs1010/1819s1/as03-comments.html">
+      
+      
+      <link rel="shortcut icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1, mkdocs-material-5.1.3">
+    
+    
+      
+        <title>3. Comments and Answer Keys - CS1010 Programming Methodology</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.62d34fff.min.css">
+      
+      
+    
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Gentium+Book+Basic">
+    
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700">
+    
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#assignment-3-comments" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="https://www.comp.nus.edu.sg/~ooiwt/cs1010/1819s1" title="CS1010 Programming Methodology" class="md-header-nav__button md-logo" aria-label="CS1010 Programming Methodology">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12,8A3,3 0 0,0 15,5A3,3 0 0,0 12,2A3,3 0 0,0 9,5A3,3 0 0,0 12,8M12,11.54C9.64,9.35 6.5,8 3,8V19C6.5,19 9.64,20.35 12,22.54C14.36,20.35 17.5,19 21,19V8C17.5,8 14.36,9.35 12,11.54Z" /></svg>
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z" /></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            CS1010 Programming Methodology
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              3. Comments and Answer Keys
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z" /></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z" /></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z" /></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+        
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="https://www.comp.nus.edu.sg/~ooiwt/cs1010/1819s1" title="CS1010 Programming Methodology" class="md-nav__button md-logo" aria-label="CS1010 Programming Methodology">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12,8A3,3 0 0,0 15,5A3,3 0 0,0 12,2A3,3 0 0,0 9,5A3,3 0 0,0 12,8M12,11.54C9.64,9.35 6.5,8 3,8V19C6.5,19 9.64,20.35 12,22.54C14.36,20.35 17.5,19 21,19V8C17.5,8 14.36,9.35 12,11.54Z" /></svg>
+
+    </a>
+    CS1010 Programming Methodology
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="index.html" title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="midterm.html" title="Midterm" class="md-nav__link">
+      Midterm
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      Practical Exams
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Practical Exams" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        Practical Exams
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="pe1.html" title="Info About PE1" class="md-nav__link">
+      Info About PE1
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="pe1-comments.html" title="PE1 Comments and Answers" class="md-nav__link">
+      PE1 Comments and Answers
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="pe2.html" title="Info About PE2" class="md-nav__link">
+      Info About PE2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="pe2-comments.html" title="PE2 Comments and Answers" class="md-nav__link">
+      PE2 Comments and Answers
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      General
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="General" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        General
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="about.html" title="About CS1010" class="md-nav__link">
+      About CS1010
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="outcomes.html" title="Learning Outcomes" class="md-nav__link">
+      Learning Outcomes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="schedule.html" title="Schedule" class="md-nav__link">
+      Schedule
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="accounts.html" title="Accounts" class="md-nav__link">
+      Accounts
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="policies.html" title="Policies" class="md-nav__link">
+      Policies
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      Notes
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Notes" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        Notes
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="01-program.html" title="1. What is a Program?" class="md-nav__link">
+      1. What is a Program?
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="02-algo.html" title="2. Computational Problem & Algorithms" class="md-nav__link">
+      2. Computational Problem &amp; Algorithms
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="03-func.html" title="3. Functions" class="md-nav__link">
+      3. Functions
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="04-type.html" title="4. Types" class="md-nav__link">
+      4. Types
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="05-first-c.html" title="5. First C Program" class="md-nav__link">
+      5. First C Program
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="06-cs1010-io.html" title="6. CS1010 I/O Library" class="md-nav__link">
+      6. CS1010 I/O Library
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="07-arithmetic-ops.html" title="7. Arithmetic Operations" class="md-nav__link">
+      7. Arithmetic Operations
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="08-if-else.html" title="8. If Else" class="md-nav__link">
+      8. If Else
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="09-logical-exp.html" title="9. Logical Expression" class="md-nav__link">
+      9. Logical Expression
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="10-assert.html" title="10. Assertion" class="md-nav__link">
+      10. Assertion
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="11-loop.html" title="11. Loops" class="md-nav__link">
+      11. Loops
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="12-invariant.html" title="12. Reasoning About Loops" class="md-nav__link">
+      12. Reasoning About Loops
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="13-call-stack.html" title="13. Call Stack" class="md-nav__link">
+      13. Call Stack
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="14-pointers.html" title="14. Pointers" class="md-nav__link">
+      14. Pointers
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="15-array.html" title="15. Arrays" class="md-nav__link">
+      15. Arrays
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="16-string.html" title="16. Strings" class="md-nav__link">
+      16. Strings
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="17-call-by-reference.html" title="17. Call by Reference" class="md-nav__link">
+      17. Call by Reference
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="18-heap.html" title="18. Heap" class="md-nav__link">
+      18. Heap
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="19-md-array.html" title="19. Multidimensional Array" class="md-nav__link">
+      19. Multidimensional Array
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="20-macro.html" title="20. C Pre-processing" class="md-nav__link">
+      20. C Pre-processing
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="21-assert.html" title="21. Assert" class="md-nav__link">
+      21. Assert
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="22-efficiency.html" title="22. Efficiency" class="md-nav__link">
+      22. Efficiency
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="23-search.html" title="23. Binary Search" class="md-nav__link">
+      23. Binary Search
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="24-sort.html" title="24. Sorting" class="md-nav__link">
+      24. Sorting
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="25-tower.html" title="25. Tower of Hanoi" class="md-nav__link">
+      25. Tower of Hanoi
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="26-permutation.html" title="26. Permutation" class="md-nav__link">
+      26. Permutation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="27-queens.html" title="27. N Queens" class="md-nav__link">
+      27. N Queens
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="28-struct.html" title="28. Structure" class="md-nav__link">
+      28. Structure
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="29-stdio.html" title="29. stdio" class="md-nav__link">
+      29. stdio
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      Exercises
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Exercises" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        Exercises
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="ex01.html" title="1. Freezer" class="md-nav__link">
+      1. Freezer
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="ex02.html" title="2. Leap, Suffix, Days" class="md-nav__link">
+      2. Leap, Suffix, Days
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="ex03.html" title="3. Binary, Rectangle, Fibonacci, Prime" class="md-nav__link">
+      3. Binary, Rectangle, Fibonacci, Prime
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="ex04.html" title="4. ID, Grade, Index, Max" class="md-nav__link">
+      4. ID, Grade, Index, Max
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="ex05.html" title="5. Square, Escape, Magic" class="md-nav__link">
+      5. Square, Escape, Magic
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7" checked>
+    
+    <label class="md-nav__link" for="nav-7">
+      Assignments
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Assignments" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        Assignments
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="assignment.html" title="General Guide" class="md-nav__link">
+      General Guide
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="as01.html" title="1. Invest, Box, Digits, and Taxi" class="md-nav__link">
+      1. Invest, Box, Digits, and Taxi
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="as01-comments.html" title="1. Comments and Answer Keys" class="md-nav__link">
+      1. Comments and Answer Keys
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="as02.html" title="2. Collatz, Weekday, Circle, Pattern" class="md-nav__link">
+      2. Collatz, Weekday, Circle, Pattern
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="as02-comments.html" title="2. Comments and Answer Keys" class="md-nav__link">
+      2. Comments and Answer Keys
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="as03.html" title="3. Kendall, Histogram, CountingSort" class="md-nav__link">
+      3. Kendall, Histogram, CountingSort
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        3. Comments and Answer Keys
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3,9H17V7H3V9M3,13H17V11H3V13M3,17H17V15H3V17M19,17H21V15H19V17M19,7V9H21V7H19M19,13H21V11H19V13Z" /></svg>
+        </span>
+      </label>
+    
+    <a href="as03-comments.html" title="3. Comments and Answer Keys" class="md-nav__link md-nav__link--active">
+      3. Comments and Answer Keys
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#mark-distribution" class="md-nav__link">
+    Mark Distribution
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notes-on-marking-schemes" class="md-nav__link">
+    Notes on Marking Schemes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#style" class="md-nav__link">
+    Style
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#general-mistakes" class="md-nav__link">
+    General Mistakes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#logical-mistakes-bugs" class="md-nav__link">
+    Logical Mistakes (bugs)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#answer-keys" class="md-nav__link">
+    Answer Keys
+  </a>
+  
+    <nav class="md-nav" aria-label="Answer Keys">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#kendall" class="md-nav__link">
+    Kendall
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#histogram" class="md-nav__link">
+    Histogram
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#counting-sort" class="md-nav__link">
+    Counting Sort
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="as04.html" title="4. SelectionSort, Add, Mastermind" class="md-nav__link">
+      4. SelectionSort, Add, Mastermind
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="as04-comments.html" title="4. Comments and Answer Keys" class="md-nav__link">
+      4. Comments and Answer Keys
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="as05.html" title="5. Social, Life" class="md-nav__link">
+      5. Social, Life
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="as05-comments.html" title="5. Comments and Answer Keys" class="md-nav__link">
+      5. Comments and Answer Keys
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="as06.html" title="6. Permutation 1 2 3" class="md-nav__link">
+      6. Permutation 1 2 3
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="as06-comments.html" title="6. Comments and Answer Keys" class="md-nav__link">
+      6. Comments and Answer Keys
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="as07.html" title="7. Peak, Scripts, Inversion" class="md-nav__link">
+      7. Peak, Scripts, Inversion
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="as07-comments.html" title="7. Comments and Answer Keys" class="md-nav__link">
+      7. Comments and Answer Keys
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="as08.html" title="8. Maze, Fill" class="md-nav__link">
+      8. Maze, Fill
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="as08-comments.html" title="8. Comments and Answer Keys" class="md-nav__link">
+      8. Comments and Answer Keys
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="as09.html" title="9. Digits" class="md-nav__link">
+      9. Digits
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="as09-comments.html" title="9. Comments and Answer Keys" class="md-nav__link">
+      9. Comments and Answer Keys
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="quiz.html" title="Quizzes" class="md-nav__link">
+      Quizzes
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9">
+    
+    <label class="md-nav__link" for="nav-9">
+      Kahoot!
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Kahoot!" data-md-level="1">
+      <label class="md-nav__title" for="nav-9">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        Kahoot!
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="kahoot01.html" title="Flow Charts" class="md-nav__link">
+      Flow Charts
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="c-in-cs1010.html" title="C in CS1010" class="md-nav__link">
+      C in CS1010
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="style.html" title="Style Guide" class="md-nav__link">
+      Style Guide
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="documentation.html" title="Documentation Guide" class="md-nav__link">
+      Documentation Guide
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="readings.html" title="Readings" class="md-nav__link">
+      Readings
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-14" type="checkbox" id="nav-14">
+    
+    <label class="md-nav__link" for="nav-14">
+      Software/Tools
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Software/Tools" data-md-level="1">
+      <label class="md-nav__title" for="nav-14">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        Software/Tools
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="environments.html" title="Programming Environments" class="md-nav__link">
+      Programming Environments
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="unix.html" title="UNIX" class="md-nav__link">
+      UNIX
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="clang.html" title="CLang" class="md-nav__link">
+      CLang
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="vim.html" title="Vim" class="md-nav__link">
+      Vim
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="lldb.html" title="LLDB" class="md-nav__link">
+      LLDB
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="library.html" title="CS1010 I/O" class="md-nav__link">
+      CS1010 I/O
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#mark-distribution" class="md-nav__link">
+    Mark Distribution
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notes-on-marking-schemes" class="md-nav__link">
+    Notes on Marking Schemes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#style" class="md-nav__link">
+    Style
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#general-mistakes" class="md-nav__link">
+    General Mistakes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#logical-mistakes-bugs" class="md-nav__link">
+    Logical Mistakes (bugs)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#answer-keys" class="md-nav__link">
+    Answer Keys
+  </a>
+  
+    <nav class="md-nav" aria-label="Answer Keys">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#kendall" class="md-nav__link">
+    Kendall
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#histogram" class="md-nav__link">
+    Histogram
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#counting-sort" class="md-nav__link">
+    Counting Sort
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  
+                
+                
+                <h1 id="assignment-3-comments">Assignment 3: Comments</h1>
+<h2 id="mark-distribution">Mark Distribution</h2>
+<p>The output from <code>histogram</code>.  Marks are scaled up by 3x.</p>
+<div class="highlight"><pre><span></span><code>          ┴┴┴┴┴┴┴┴┴┴
+  0 - 10  ▌
+ 10 - 20  ▌
+ 20 - 30
+ 30 - 40  ▌
+ 40 - 50  ▌
+ 50 - 60  ▌
+ 60 - 70  █
+ 70 - 80  ████
+ 80 - 90  ███
+ 90 - 100 ██▌
+</code></pre></div>
+
+<h2 id="notes-on-marking-schemes">Notes on Marking Schemes</h2>
+<ul>
+<li>We apply the penalty to each program independently, i.e., the same mistake repeated in the different program get penalized multiple times.  </li>
+<li>
+<p>You will receive 0 marks if your program cannot be compiled or is plagiarised from another.</p>
+</li>
+<li>
+<p>Code that fails all test cases and showing that student does not understand the basic concepts receives 0 marks straight away.</p>
+</li>
+<li>
+<p>For the rest, we start with full marks and start deducting marks for each error.</p>
+</li>
+<li>
+<p>While the teaching team tries to ensure fair and consistent grading of assignments across all groups, each TA can, at his/her own discretion, and with the approval of Wei Tsang, adjust the grading criteria to align with the messages that they sent to the students in their tutorial group.</p>
+</li>
+</ul>
+<h2 id="style">Style</h2>
+<p>Two marks are allocated for each question. We won't penalize for every violation, but instead, the grader judges whether the code is clean, understandable, properly indented, use proper variable names, etc. 0 - 0.5 marks for very bad style, 1.0 - 1.5 for something in the middle, 2 for an ok code. </p>
+<p>To be safe, please follow strictly the CS1010 coding standards.</p>
+<h2 id="general-mistakes">General Mistakes</h2>
+<p>This penalty applies once per program (not per occurrence).</p>
+<ul>
+<li>-1 for missing type in function declaration or definition</li>
+<li>-1 for using <code>int</code>/<code>long</code> instead of <code>bool</code> for boolean functions or variables</li>
+<li>-1 for using <code>double</code> instead of <code>long</code> when it is not necessary (does not involve integer division).  For instance, using <code>double</code> for <code>invest.c</code> during calculation is ok, using <code>double</code> for calculating the area of the box is not.</li>
+<li>-1 for using of <code>int</code> instead of <code>long</code>.  Using <code>int</code> for this assignment is ok only for <code>day</code>, <code>hour</code>, and <code>minute</code>, where there is an implicit constraint on the range of the value.</li>
+<li>-1 for failing to use parenthesis (e.g., <code>a &amp;&amp; b || c</code>)</li>
+<li>-1 for unnecessary/unused parameters passed into a function</li>
+<li>-1 for unnecessary/unused variables declared</li>
+<li>-1 for not including @author/@group</li>
+<li>-1 for global variables</li>
+<li>-1 for unreachable code / return</li>
+<li>-1 for using <code>==</code> to compare real numbers</li>
+</ul>
+<h2 id="logical-mistakes-bugs">Logical Mistakes (bugs)</h2>
+<p>In general, -1 for each bug.</p>
+<ul>
+<li>-1 for each incorrect logical expression</li>
+<li>-1 for each incorrect arithmetic expression</li>
+<li>-1 for each incorrect use of <code>if</code>-<code>else</code></li>
+<li>-1 for each uninitialized variables causing incorrect output.</li>
+<li>-1 if program prints extra text / newline</li>
+<li>-1 if the program returns non-zero from <code>main</code> even if the program exits successfully.</li>
+</ul>
+<p>Note: we didn't deduct marks for using VLA for this assignment, as you have not learned about <code>malloc</code>/<code>calloc</code> yet. </p>
+<h2 id="answer-keys">Answer Keys</h2>
+<h3 id="kendall">Kendall</h3>
+<p>We need to count the total number of inversions in a given array.  I break this problem into two:</p>
+<ol>
+<li>
+<p>Given an element <span><span class="MathJax_Preview">a_i</span><script type="math/tex">a_i</script></span>, how many elements are out of the order with respect to this element?   </p>
+</li>
+<li>
+<p>We then sum up the total number of elements out of order, for each <span><span class="MathJax_Preview">a_i</span><script type="math/tex">a_i</script></span>.  </p>
+</li>
+</ol>
+<p>This question should be quite straightforward, except that we need to consider the following:</p>
+<ul>
+<li>
+<p>if the pair <span><span class="MathJax_Preview">a_i</span><script type="math/tex">a_i</script></span> and <span><span class="MathJax_Preview">a_j</span><script type="math/tex">a_j</script></span> are out of order, then we can count this pair as <em>one</em> inversion only.  We need to fix a convention on how we account for inversion. I use convention that we count the inversion if <span><span class="MathJax_Preview">i &lt; j</span><script type="math/tex">i < j</script></span> and $a_i &gt; <span><span class="MathJax_Preview">a_j</span><script type="math/tex">a_j</script></span>.  In other words, for the subproblem 1 above, we only need to check for inversions for each element <span><span class="MathJax_Preview">a_j</span><script type="math/tex">a_j</script></span>, if <span><span class="MathJax_Preview">j &gt; i</span><script type="math/tex">j > i</script></span>.</p>
+</li>
+<li>
+<p><span><span class="MathJax_Preview">a_i</span><script type="math/tex">a_i</script></span> shouldn't be the last element since there is no <span><span class="MathJax_Preview">j</span><script type="math/tex">j</script></span> that is bigger than <span><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span>.</p>
+</li>
+</ul>
+<p>Slightly more &#8536; of the class get this question correct, with full marks.  Well done!</p>
+<p>(The snippet for this program can be found in <a href="22-efficiency.html">Unit 22</a> on efficiency).</p>
+<h3 id="histogram">Histogram</h3>
+<p>To solve this problem, we should break the problem into two steps.  First, we go through the data and count the number of items in each basket.  This can be done with the following snippet.</p>
+<div class="highlight"><pre><span></span><code><span class="cp">#define NUM_OF_BUCKETS 10</span>
+<span class="cp">#define MAX_SCORE 100</span>
+ <span class="o">:</span>
+<span class="cm">/**</span>
+<span class="cm"> * Populate the buckets of the histogram based on the input array marks, containing</span>
+<span class="cm"> * num_of_items items.</span>
+<span class="cm"> *</span>
+<span class="cm"> * @param[in] histogram Counters to store how many items fall into each bucket.</span>
+<span class="cm"> * @param[in] num_of_items The number of input marks to sort into the buckets.</span>
+<span class="cm"> * @param[in] marks An array of marks to be sorted into the buckets.</span>
+<span class="cm"> */</span>
+<span class="kt">void</span> <span class="n">populate_histogram</span><span class="p">(</span><span class="kt">long</span> <span class="n">histogram</span><span class="p">[</span><span class="n">NUM_OF_BUCKETS</span><span class="p">],</span> <span class="kt">int</span> <span class="n">num_of_items</span><span class="p">,</span> <span class="k">const</span> <span class="kt">double</span> <span class="n">marks</span><span class="p">[</span><span class="n">num_of_items</span><span class="p">])</span>
+<span class="p">{</span>
+  <span class="kt">double</span> <span class="n">interval</span> <span class="o">=</span> <span class="n">MAX_SCORE</span><span class="o">/</span><span class="p">(</span><span class="n">NUM_OF_BUCKETS</span><span class="o">*</span><span class="mf">1.0</span><span class="p">);</span>
+  <span class="k">for</span> <span class="p">(</span><span class="kt">long</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">num_of_items</span><span class="p">;</span> <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kt">long</span> <span class="n">bucket</span> <span class="o">=</span> <span class="n">marks</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">/</span><span class="n">interval</span><span class="p">;</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">bucket</span> <span class="o">==</span> <span class="n">NUM_OF_BUCKETS</span><span class="p">)</span> <span class="p">{</span>
+      <span class="n">bucket</span> <span class="o">-=</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="n">histogram</span><span class="p">[</span><span class="n">bucket</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>The only tricky part of this code is what happens if <code>marks[i]</code> is 100, in which case, <code>marks[i]/interval</code> would lead to <code>bucket</code> being <code>10</code>.  Since the indices to the buckets are <code>histogram[0]</code>,..., <code>histogram[9]</code> only, we would be writing into a memory location that we do not own if we increment <code>histogram[10]</code>.  For this question, we were told that 100 belongs to <span><span class="MathJax_Preview">b_9</span><script type="math/tex">b_9</script></span>.  So, we need to decrement the variable <code>bucket</code> by 1.</p>
+<p>Second, after populating the buckets, we need to draw out the histogram:</p>
+<div class="highlight"><pre><span></span><code><span class="cp">#define BAR_LENGTH 10.0</span>
+   <span class="o">:</span>
+  <span class="kt">double</span> <span class="n">height</span><span class="p">[</span><span class="n">NUM_OF_BUCKETS</span><span class="p">];</span>
+  <span class="k">for</span> <span class="p">(</span><span class="kt">long</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">NUM_OF_BUCKETS</span><span class="p">;</span> <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">cs1010_print_string</span><span class="p">(</span><span class="n">axis_labels</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+
+    <span class="n">height</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">BAR_LENGTH</span><span class="o">*</span><span class="n">histogram</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">/</span><span class="n">num_of_items</span><span class="p">;</span>
+
+    <span class="c1">// Print full blocks</span>
+    <span class="kt">long</span> <span class="n">num_of_cells</span> <span class="o">=</span> <span class="n">floor</span><span class="p">(</span><span class="n">height</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kt">long</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">num_of_cells</span><span class="p">;</span> <span class="n">j</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+      <span class="n">cs1010_print_string</span><span class="p">(</span><span class="n">BLOCK</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="c1">// Print final half-block, block or no block if height is integer</span>
+    <span class="kt">double</span> <span class="n">delta</span> <span class="o">=</span> <span class="n">height</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">-</span> <span class="n">floor</span><span class="p">(</span><span class="n">height</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="n">delta</span> <span class="o">&gt;</span> <span class="mf">0.5</span><span class="p">)</span> <span class="p">{</span>
+      <span class="n">cs1010_print_string</span><span class="p">(</span><span class="n">BLOCK</span><span class="p">);</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">delta</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+      <span class="n">cs1010_print_string</span><span class="p">(</span><span class="n">HALF_BLOCK</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="n">cs1010_println_string</span><span class="p">(</span><span class="s">&quot;&quot;</span><span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>The purpose of this question to see how arrays can be used as a list (the input marks) and a lookup table (for histogram frequency, height, and y-axis).</p>
+<p>This should be quite straightforward.  At least &#8536; of the class received 9 marks or above for this.  Well done!  </p>
+<p>There are some students, however, who tried to compare <code>double</code> variable using <code>==</code> operator and got deducted one mark for it.  Revisit <a href="https://nus-cs1010.github.io/1819-s1/08-if-else/index.html#comparing-real-numbers">Unit 08</a> if you have doubts about why we should never compare <code>double</code> variable using <code>==</code>.</p>
+<p>Another common mistake that students make, at least at the beginning of doing this assignment, is to use <code>cs1010_read_long()</code> to read a <code>double</code>.  The function <code>cs1010_read_long()</code> gives a warning if it is used to read a <code>double</code> value.  This is one of the advantages of using the CS1010 library to read instead of the <code>scanf</code> functions.  <code>scanf</code> would just silently failed and you would be left scratching your head why your code does not work!</p>
+<h3 id="counting-sort">Counting Sort</h3>
+<p>This is the assignment question that most students are having trouble with.</p>
+<p>Students who do not follow the instructions and use any other sorting algorithm (e.g., bubble sort) will receive 0 for correctness.</p>
+<p>Students who just loop through the array and prints out all the numbers, without counting, will get at most 2 marks for correctness.  The question clearly asked you to count.</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// A 2 mark solution</span>
+<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">k</span><span class="p">;</span> <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="n">j</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">==</span> <span class="n">i</span><span class="p">)</span> <span class="p">{</span>
+      <span class="n">cs1010_println_long</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>Students who just loop through the array and count, but goes through it multiple times to store the frequency of each number, will get at most 4 marks for correctness.  Here, you are not exploiting array properly to help you solve the problem!</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// A 4 mark solution</span>
+<span class="kt">long</span> <span class="n">counter</span><span class="p">[</span><span class="n">k</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="mi">0</span><span class="p">};</span>
+
+<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">k</span><span class="p">;</span> <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="n">j</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">==</span> <span class="n">i</span><span class="p">)</span> <span class="p">{</span>
+      <span class="n">counter</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">k</span><span class="p">;</span> <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">counter</span><span class="p">[</span><span class="n">i</span><span class="p">];</span> <span class="n">j</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">cs1010_println_long</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>In the code above, the <code>counter</code> array is useless, since we could have just use a simple counter variable (instead of an array) to achieve the same thing!</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// A 4 mark solution</span>
+<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">k</span><span class="p">;</span> <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kt">long</span> <span class="n">counter</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+  <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="n">j</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">==</span> <span class="n">i</span><span class="p">)</span> <span class="p">{</span>
+      <span class="n">counter</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+  <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">counter</span><span class="p">;</span> <span class="n">j</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">cs1010_println_long</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>What we are looking for, and the "mental leap" that we want to see in the students, is how we can use an array as a lookup table to store the frequency counters.</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// An 8 mark solution</span>
+<span class="kt">long</span> <span class="n">counter</span><span class="p">[</span><span class="n">k</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="mi">0</span><span class="p">};</span>
+
+<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="n">j</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+  <span class="n">counter</span><span class="p">[</span><span class="n">a</span><span class="p">[</span><span class="n">j</span><span class="p">]]</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">k</span><span class="p">;</span> <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">counter</span><span class="p">[</span><span class="n">i</span><span class="p">];</span> <span class="n">j</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">cs1010_println_long</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>Only about half the class get this.  But hopefully, after this assignment, everyone gets how powerful a lookup table is as a problem-solving tool.</p>
+<p>A final comment about the loop:</p>
+<div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="n">j</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+  <span class="n">counter</span><span class="p">[</span><span class="n">a</span><span class="p">[</span><span class="n">j</span><span class="p">]]</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>We should not actually write code that looks like this unless we can be sure that <code>a[j]</code> is within range of 1 and <span><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span>.  There is a reason that we ask you to validate the input for this question, but not for any other questions.  Because, for this question, if you do not validate the input, it is very easy to access a location that is out-of-bounds of your array and crash your program.</p>
+<div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="n">j</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">if</span> <span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mi">1</span> <span class="o">&amp;&amp;</span> <span class="n">a</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="n">k</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">counter</span><span class="p">[</span><span class="n">a</span><span class="p">[</span><span class="n">j</span><span class="p">]]</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="as03.html" title="3. Kendall, Histogram, CountingSort" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                3. Kendall, Histogram, CountingSort
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="as04.html" title="4. SelectionSort, Add, Mastermind" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                4. SelectionSort, Add, Mastermind
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z" /></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright by Department of Computer Science, National University of Singapore 2018
+          </div>
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="assets/javascripts/vendor.f81b9e8b.min.js"></script>
+      <script src="assets/javascripts/bundle.23546af0.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+      
+      <script>
+        app = initialize({
+          base: ".",
+          features: [],
+          search: Object.assign({
+            worker: "assets/javascripts/worker/search.58d22e8e.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+      
+    
+  </body>
+</html>

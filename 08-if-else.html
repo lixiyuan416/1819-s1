@@ -1,0 +1,2159 @@
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <link rel="canonical" href="https://www.comp.nus.edu.sg/~ooiwt/cs1010/1819s1/08-if-else.html">
+      
+      
+      <link rel="shortcut icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1, mkdocs-material-5.1.3">
+    
+    
+      
+        <title>8. If Else - CS1010 Programming Methodology</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.62d34fff.min.css">
+      
+      
+    
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Gentium+Book+Basic">
+    
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700">
+    
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#unit-8-conditional-statement" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="https://www.comp.nus.edu.sg/~ooiwt/cs1010/1819s1" title="CS1010 Programming Methodology" class="md-header-nav__button md-logo" aria-label="CS1010 Programming Methodology">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12,8A3,3 0 0,0 15,5A3,3 0 0,0 12,2A3,3 0 0,0 9,5A3,3 0 0,0 12,8M12,11.54C9.64,9.35 6.5,8 3,8V19C6.5,19 9.64,20.35 12,22.54C14.36,20.35 17.5,19 21,19V8C17.5,8 14.36,9.35 12,11.54Z" /></svg>
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z" /></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            CS1010 Programming Methodology
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              8. If Else
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z" /></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z" /></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z" /></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+        
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="https://www.comp.nus.edu.sg/~ooiwt/cs1010/1819s1" title="CS1010 Programming Methodology" class="md-nav__button md-logo" aria-label="CS1010 Programming Methodology">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12,8A3,3 0 0,0 15,5A3,3 0 0,0 12,2A3,3 0 0,0 9,5A3,3 0 0,0 12,8M12,11.54C9.64,9.35 6.5,8 3,8V19C6.5,19 9.64,20.35 12,22.54C14.36,20.35 17.5,19 21,19V8C17.5,8 14.36,9.35 12,11.54Z" /></svg>
+
+    </a>
+    CS1010 Programming Methodology
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="index.html" title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="midterm.html" title="Midterm" class="md-nav__link">
+      Midterm
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      Practical Exams
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Practical Exams" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        Practical Exams
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="pe1.html" title="Info About PE1" class="md-nav__link">
+      Info About PE1
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="pe1-comments.html" title="PE1 Comments and Answers" class="md-nav__link">
+      PE1 Comments and Answers
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="pe2.html" title="Info About PE2" class="md-nav__link">
+      Info About PE2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="pe2-comments.html" title="PE2 Comments and Answers" class="md-nav__link">
+      PE2 Comments and Answers
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      General
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="General" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        General
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="about.html" title="About CS1010" class="md-nav__link">
+      About CS1010
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="outcomes.html" title="Learning Outcomes" class="md-nav__link">
+      Learning Outcomes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="schedule.html" title="Schedule" class="md-nav__link">
+      Schedule
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="accounts.html" title="Accounts" class="md-nav__link">
+      Accounts
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="policies.html" title="Policies" class="md-nav__link">
+      Policies
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" checked>
+    
+    <label class="md-nav__link" for="nav-5">
+      Notes
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Notes" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        Notes
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="01-program.html" title="1. What is a Program?" class="md-nav__link">
+      1. What is a Program?
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="02-algo.html" title="2. Computational Problem & Algorithms" class="md-nav__link">
+      2. Computational Problem &amp; Algorithms
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="03-func.html" title="3. Functions" class="md-nav__link">
+      3. Functions
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="04-type.html" title="4. Types" class="md-nav__link">
+      4. Types
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="05-first-c.html" title="5. First C Program" class="md-nav__link">
+      5. First C Program
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="06-cs1010-io.html" title="6. CS1010 I/O Library" class="md-nav__link">
+      6. CS1010 I/O Library
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="07-arithmetic-ops.html" title="7. Arithmetic Operations" class="md-nav__link">
+      7. Arithmetic Operations
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        8. If Else
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3,9H17V7H3V9M3,13H17V11H3V13M3,17H17V15H3V17M19,17H21V15H19V17M19,7V9H21V7H19M19,13H21V11H19V13Z" /></svg>
+        </span>
+      </label>
+    
+    <a href="08-if-else.html" title="8. If Else" class="md-nav__link md-nav__link--active">
+      8. If Else
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#comparison-operator" class="md-nav__link">
+    Comparison Operator
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-max-of-two-numbers" class="md-nav__link">
+    Example: Max of two numbers
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#else" class="md-nav__link">
+    Else
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nested-else-if" class="md-nav__link">
+    Nested Else-If
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#avoid-skipping-the-curly-braces" class="md-nav__link">
+    Avoid Skipping the Curly Braces
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conditional-operator" class="md-nav__link">
+    Conditional Operator
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comparing-real-numbers" class="md-nav__link">
+    Comparing Real Numbers
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#problem-sets" class="md-nav__link">
+    Problem Sets
+  </a>
+  
+    <nav class="md-nav" aria-label="Problem Sets">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#problem-81" class="md-nav__link">
+    Problem 8.1
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#problem-82" class="md-nav__link">
+    Problem 8.2
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#problem-83" class="md-nav__link">
+    Problem 8.3
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#appendix-code-from-lecture" class="md-nav__link">
+    Appendix: Code From Lecture
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="09-logical-exp.html" title="9. Logical Expression" class="md-nav__link">
+      9. Logical Expression
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="10-assert.html" title="10. Assertion" class="md-nav__link">
+      10. Assertion
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="11-loop.html" title="11. Loops" class="md-nav__link">
+      11. Loops
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="12-invariant.html" title="12. Reasoning About Loops" class="md-nav__link">
+      12. Reasoning About Loops
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="13-call-stack.html" title="13. Call Stack" class="md-nav__link">
+      13. Call Stack
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="14-pointers.html" title="14. Pointers" class="md-nav__link">
+      14. Pointers
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="15-array.html" title="15. Arrays" class="md-nav__link">
+      15. Arrays
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="16-string.html" title="16. Strings" class="md-nav__link">
+      16. Strings
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="17-call-by-reference.html" title="17. Call by Reference" class="md-nav__link">
+      17. Call by Reference
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="18-heap.html" title="18. Heap" class="md-nav__link">
+      18. Heap
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="19-md-array.html" title="19. Multidimensional Array" class="md-nav__link">
+      19. Multidimensional Array
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="20-macro.html" title="20. C Pre-processing" class="md-nav__link">
+      20. C Pre-processing
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="21-assert.html" title="21. Assert" class="md-nav__link">
+      21. Assert
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="22-efficiency.html" title="22. Efficiency" class="md-nav__link">
+      22. Efficiency
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="23-search.html" title="23. Binary Search" class="md-nav__link">
+      23. Binary Search
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="24-sort.html" title="24. Sorting" class="md-nav__link">
+      24. Sorting
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="25-tower.html" title="25. Tower of Hanoi" class="md-nav__link">
+      25. Tower of Hanoi
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="26-permutation.html" title="26. Permutation" class="md-nav__link">
+      26. Permutation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="27-queens.html" title="27. N Queens" class="md-nav__link">
+      27. N Queens
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="28-struct.html" title="28. Structure" class="md-nav__link">
+      28. Structure
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="29-stdio.html" title="29. stdio" class="md-nav__link">
+      29. stdio
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      Exercises
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Exercises" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        Exercises
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="ex01.html" title="1. Freezer" class="md-nav__link">
+      1. Freezer
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="ex02.html" title="2. Leap, Suffix, Days" class="md-nav__link">
+      2. Leap, Suffix, Days
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="ex03.html" title="3. Binary, Rectangle, Fibonacci, Prime" class="md-nav__link">
+      3. Binary, Rectangle, Fibonacci, Prime
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="ex04.html" title="4. ID, Grade, Index, Max" class="md-nav__link">
+      4. ID, Grade, Index, Max
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="ex05.html" title="5. Square, Escape, Magic" class="md-nav__link">
+      5. Square, Escape, Magic
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+    
+    <label class="md-nav__link" for="nav-7">
+      Assignments
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Assignments" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        Assignments
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="assignment.html" title="General Guide" class="md-nav__link">
+      General Guide
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="as01.html" title="1. Invest, Box, Digits, and Taxi" class="md-nav__link">
+      1. Invest, Box, Digits, and Taxi
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="as01-comments.html" title="1. Comments and Answer Keys" class="md-nav__link">
+      1. Comments and Answer Keys
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="as02.html" title="2. Collatz, Weekday, Circle, Pattern" class="md-nav__link">
+      2. Collatz, Weekday, Circle, Pattern
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="as02-comments.html" title="2. Comments and Answer Keys" class="md-nav__link">
+      2. Comments and Answer Keys
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="as03.html" title="3. Kendall, Histogram, CountingSort" class="md-nav__link">
+      3. Kendall, Histogram, CountingSort
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="as03-comments.html" title="3. Comments and Answer Keys" class="md-nav__link">
+      3. Comments and Answer Keys
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="as04.html" title="4. SelectionSort, Add, Mastermind" class="md-nav__link">
+      4. SelectionSort, Add, Mastermind
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="as04-comments.html" title="4. Comments and Answer Keys" class="md-nav__link">
+      4. Comments and Answer Keys
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="as05.html" title="5. Social, Life" class="md-nav__link">
+      5. Social, Life
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="as05-comments.html" title="5. Comments and Answer Keys" class="md-nav__link">
+      5. Comments and Answer Keys
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="as06.html" title="6. Permutation 1 2 3" class="md-nav__link">
+      6. Permutation 1 2 3
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="as06-comments.html" title="6. Comments and Answer Keys" class="md-nav__link">
+      6. Comments and Answer Keys
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="as07.html" title="7. Peak, Scripts, Inversion" class="md-nav__link">
+      7. Peak, Scripts, Inversion
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="as07-comments.html" title="7. Comments and Answer Keys" class="md-nav__link">
+      7. Comments and Answer Keys
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="as08.html" title="8. Maze, Fill" class="md-nav__link">
+      8. Maze, Fill
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="as08-comments.html" title="8. Comments and Answer Keys" class="md-nav__link">
+      8. Comments and Answer Keys
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="as09.html" title="9. Digits" class="md-nav__link">
+      9. Digits
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="as09-comments.html" title="9. Comments and Answer Keys" class="md-nav__link">
+      9. Comments and Answer Keys
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="quiz.html" title="Quizzes" class="md-nav__link">
+      Quizzes
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9">
+    
+    <label class="md-nav__link" for="nav-9">
+      Kahoot!
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Kahoot!" data-md-level="1">
+      <label class="md-nav__title" for="nav-9">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        Kahoot!
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="kahoot01.html" title="Flow Charts" class="md-nav__link">
+      Flow Charts
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="c-in-cs1010.html" title="C in CS1010" class="md-nav__link">
+      C in CS1010
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="style.html" title="Style Guide" class="md-nav__link">
+      Style Guide
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="documentation.html" title="Documentation Guide" class="md-nav__link">
+      Documentation Guide
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="readings.html" title="Readings" class="md-nav__link">
+      Readings
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-14" type="checkbox" id="nav-14">
+    
+    <label class="md-nav__link" for="nav-14">
+      Software/Tools
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Software/Tools" data-md-level="1">
+      <label class="md-nav__title" for="nav-14">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        Software/Tools
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="environments.html" title="Programming Environments" class="md-nav__link">
+      Programming Environments
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="unix.html" title="UNIX" class="md-nav__link">
+      UNIX
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="clang.html" title="CLang" class="md-nav__link">
+      CLang
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="vim.html" title="Vim" class="md-nav__link">
+      Vim
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="lldb.html" title="LLDB" class="md-nav__link">
+      LLDB
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="library.html" title="CS1010 I/O" class="md-nav__link">
+      CS1010 I/O
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#comparison-operator" class="md-nav__link">
+    Comparison Operator
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-max-of-two-numbers" class="md-nav__link">
+    Example: Max of two numbers
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#else" class="md-nav__link">
+    Else
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nested-else-if" class="md-nav__link">
+    Nested Else-If
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#avoid-skipping-the-curly-braces" class="md-nav__link">
+    Avoid Skipping the Curly Braces
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conditional-operator" class="md-nav__link">
+    Conditional Operator
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comparing-real-numbers" class="md-nav__link">
+    Comparing Real Numbers
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#problem-sets" class="md-nav__link">
+    Problem Sets
+  </a>
+  
+    <nav class="md-nav" aria-label="Problem Sets">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#problem-81" class="md-nav__link">
+    Problem 8.1
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#problem-82" class="md-nav__link">
+    Problem 8.2
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#problem-83" class="md-nav__link">
+    Problem 8.3
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#appendix-code-from-lecture" class="md-nav__link">
+    Appendix: Code From Lecture
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  
+                
+                
+                <h1 id="unit-8-conditional-statement">Unit 8: Conditional Statement</h1>
+<p>So far the C programs that we have written has a straightforward <em>execution path</em>.  The execution flows from top to bottom in <code>main</code>, jumping to a function being called (or <em>callee</em>), and back to the caller when the function returns.</p>
+<p>We have, however, seen a few examples so far where the execution path can <em>branch</em> off to either one of two paths, depends on a condition:</p>
+<ul>
+<li>In the algorithm to compute the <span><span class="MathJax_Preview">max(L, k)</span><script type="math/tex">max(L, k)</script></span>, we check if <span><span class="MathJax_Preview">l_i &gt; m</span><script type="math/tex">l_i > m</script></span>, and update <span><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span> only if this is true.  </li>
+<li>In the algorithm to compute the <span><span class="MathJax_Preview">factorial(n)</span><script type="math/tex">factorial(n)</script></span>, we check if <span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> equals 0, and return 1 if it is true, otherwise, we return <span><span class="MathJax_Preview">n \times factorial(n-1)</span><script type="math/tex">n \times factorial(n-1)</script></span>.</li>
+</ul>
+<p>We are not ready to write C code that processes a list yet, so let's use the <span><span class="MathJax_Preview">factorial(n)</span><script type="math/tex">factorial(n)</script></span> function as an example.  In C, the <span><span class="MathJax_Preview">factorial(n)</span><script type="math/tex">factorial(n)</script></span> would look like this:</p>
+<div class="highlight"><pre><span></span><code><span class="kt">long</span> <span class="nf">factorial</span><span class="p">(</span><span class="kt">long</span> <span class="n">n</span><span class="p">)</span> 
+<span class="p">{</span>
+  <span class="k">if</span> <span class="p">(</span><span class="n">n</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="mi">1</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="k">return</span> <span class="n">n</span> <span class="o">*</span> <span class="n">factorial</span><span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p><img alt="factorial" src="figures/max-flowchart/max-flowchart.010.png" /></p>
+<p>In this example, you see a new C keyword <code>if</code>.  This keyword is used at the beginning of a conditional block of code.  The general syntax is:</p>
+<div class="highlight"><pre><span></span><code><span class="k">if</span> <span class="p">(</span><span class="o">&lt;</span><span class="n">logical</span> <span class="n">expression</span><span class="o">&gt;</span><span class="p">)</span> <span class="p">{</span> 
+  <span class="s">&quot;true block&quot;</span><span class="o">:</span> <span class="n">statements</span> <span class="n">to</span> <span class="n">be</span> <span class="n">executed</span> <span class="k">if</span> <span class="n">expression</span> <span class="n">evaluates</span> <span class="n">to</span> <span class="nb">true</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>The <code>if</code> keyword is followed by a <em>logical expression</em> in parenthesis.  This is followed by a block of statements (in curly braces <code>{</code> and <code>}</code>).  If the logical expression is true, then the statements are executed, otherwise, they are skipped.  For this reason, the group of statements is known as a <em>true block</em>.</p>
+<h2 id="comparison-operator">Comparison Operator</h2>
+<p>The logical expression <code>n == 0</code> is true if the variable <code>n</code> holds the value of <code>0</code>.  </p>
+<div class="admonition warn">
+<p class="admonition-title"><code>==</code> vs <code>=</code></p>
+<p>Note that use of TWO <code>=</code> signs.  This is often confused by newbie programmers with a single <code>=</code> sign, which is used for assignment.  A common bug is to write</p>
+<div class="highlight"><pre><span></span><code>  <span class="k">if</span> <span class="p">(</span><span class="n">n</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+     <span class="o">:</span>
+  <span class="p">}</span>
+</code></pre></div>
+
+</div>
+<p>The <code>==</code> is known as a <em>comparison operator</em>.  It compares if the left-hand side has the same value as the right-hand side. Other comparison operators include <code>&gt;</code> (greater than), <code>&lt;</code> (less than), <code>&gt;=</code> (greater or equal to), <code>&lt;=</code> (less than or equal to), and <code>!=</code> (not equal).</p>
+<p>In other words, the function <code>factorial</code> will exit and return <code>1</code> if the parameter <code>n</code> equals to <code>0</code>.  The rest of the code (particularly, Line <del class="critic">5</del> 6) will be skipped.</p>
+<p>What if <code>n</code> is not <code>0</code>?  The block that contains Line 3 <code>return 1;</code> will be skipped, and Line <del class="critic">5</del> 6 <code>return n * factorial(n - 1);</code> will be executed instead, which is what we intended for the <code>factorial</code> function to do.</p>
+<h2 id="example-max-of-two-numbers">Example: Max of two numbers</h2>
+<p>Let's switch to another example: suppose we have three variables, <code>x</code>, <code>y</code>, and <code>max</code>, and we want to set <code>max</code> to the maximum of <code>x</code> and <code>y</code>.</p>
+<p>Consider the following code snippet:</p>
+<div class="highlight"><pre><span></span><code><span class="k">if</span> <span class="p">(</span><span class="n">x</span> <span class="o">&gt;</span> <span class="n">y</span><span class="p">)</span> <span class="p">{</span>
+  <span class="n">max</span> <span class="o">=</span> <span class="n">x</span><span class="p">;</span>
+<span class="p">}</span> 
+<span class="k">if</span> <span class="p">(</span><span class="n">x</span> <span class="o">&lt;</span> <span class="n">y</span><span class="p">)</span> <span class="p">{</span>
+  <span class="n">max</span> <span class="o">=</span> <span class="n">y</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>Take a moment to understand the code above, and see if you can figure out what is wrong.</p>
+<p>When we think about writing conditionals, we have to exhaustively reason about what are all the possible scenarios that could occur.  In this example, we need to think about what are the possible relationships between <code>x</code> and <code>y</code> when we compare <code>x</code> an <code>y</code>.  There are actually three possibilities!</p>
+<ul>
+<li><code>x &gt; y</code>: in this case, <code>x</code> is larger and we set <code>max</code> to <code>x</code></li>
+<li><code>y &gt; x</code>: in this case, <code>y</code> is larger and we set <code>max</code> to <code>y</code></li>
+<li><code>x == y</code>: in this case, both are equally large, so the maximum of the two can be either <code>x</code> or <code>y</code>.</li>
+</ul>
+<p>In the code above, <code>max</code> is not set properly if <code>x == y</code>!</p>
+<p>The following code adds the third case and arbitrarily chooses to set <code>max</code> to <code>y</code> if both <code>x</code> and <code>y</code> have the same value.</p>
+<div class="highlight"><pre><span></span><code><span class="k">if</span> <span class="p">(</span><span class="n">x</span> <span class="o">&gt;</span> <span class="n">y</span><span class="p">)</span> <span class="p">{</span>
+  <span class="n">max</span> <span class="o">=</span> <span class="n">x</span><span class="p">;</span>
+<span class="p">}</span> 
+<span class="k">if</span> <span class="p">(</span><span class="n">x</span> <span class="o">&lt;</span> <span class="n">y</span><span class="p">)</span> <span class="p">{</span>
+  <span class="n">max</span> <span class="o">=</span> <span class="n">y</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="k">if</span> <span class="p">(</span><span class="n">x</span> <span class="o">==</span> <span class="n">y</span><span class="p">)</span> <span class="p">{</span>
+  <span class="n">max</span> <span class="o">=</span> <span class="n">y</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<h2 id="else">Else</h2>
+<p>The code snippet above now correctly sets <code>max</code> to the maximum of <code>x</code> and <code>y</code>.
+The code, however, is not very satisfying, since we compare between <code>x</code> and <code>y</code> three times.   Let's see how we can reduce the number of comparisons to one.  We are going to do some <em>refactoring</em> of the code above.</p>
+<p>First, observe that the "true block" for <code>x &lt; y</code> and <code>x == y</code> are the same, and we can combine it into a single comparison <code>x &lt;= y</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="k">if</span> <span class="p">(</span><span class="n">x</span> <span class="o">&gt;</span> <span class="n">y</span><span class="p">)</span> <span class="p">{</span>
+  <span class="n">max</span> <span class="o">=</span> <span class="n">x</span><span class="p">;</span>
+<span class="p">}</span> 
+<span class="k">if</span> <span class="p">(</span><span class="n">x</span> <span class="o">&lt;=</span> <span class="n">y</span><span class="p">)</span> <span class="p">{</span>
+  <span class="n">max</span> <span class="o">=</span> <span class="n">y</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>Second, observe that if <code>x &gt; y</code> is false, then <code>x &lt;= y</code> must be true.  We say that <code>x &gt; y</code> and <code>x &lt;= y</code> are <em>negation</em> (or opposite) of each other.  So, the check for <code>x &lt;= y</code> is redundant -- checking <code>x &gt; y</code> is enough to tell us if <code>x &lt;= y</code>.  We can re-write the code above as:</p>
+<div class="highlight"><pre><span></span><code><span class="k">if</span> <span class="p">(</span><span class="n">x</span> <span class="o">&gt;</span> <span class="n">y</span><span class="p">)</span> <span class="p">{</span>
+  <span class="n">max</span> <span class="o">=</span> <span class="n">x</span><span class="p">;</span>
+<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+  <span class="n">max</span> <span class="o">=</span> <span class="n">y</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>The word <code>else</code> as seen above is another C keyword -- it must be used in conjunction with <code>if</code> to indicate an alternate path of execution if the logical expression is false.</p>
+<div class="highlight"><pre><span></span><code><span class="k">if</span> <span class="p">(</span><span class="o">&lt;</span><span class="n">logical</span> <span class="n">expression</span><span class="o">&gt;</span><span class="p">)</span> <span class="p">{</span> 
+  <span class="s">&quot;true block&quot;</span><span class="o">:</span> <span class="n">statements</span> <span class="n">to</span> <span class="n">be</span> <span class="n">executed</span> <span class="k">if</span> <span class="n">expression</span> <span class="n">evaluates</span> <span class="n">to</span> <span class="nb">true</span>
+<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+  <span class="s">&quot;false block&quot;</span><span class="o">:</span> <span class="n">statements</span> <span class="n">to</span> <span class="n">be</span> <span class="n">executed</span> <span class="k">if</span> <span class="n">expression</span> <span class="n">evaluates</span> <span class="n">to</span> <span class="nb">false</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<h2 id="nested-else-if">Nested Else-If</h2>
+<p>The example above considers <em>two</em> possible execution paths only.  In some situations, we may need to consider more than two execution paths.  Take the following problem for example.  You are given the numerical score for an assignment, ranged between 0 and 10.  Print out the letter grade of the assignment according to the table below:</p>
+<table>
+<thead>
+<tr>
+<th>Score</th>
+<th>Letter Grade</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>8 or higher</td>
+<td>A</td>
+</tr>
+<tr>
+<td>Less than 8 but 5 or higher</td>
+<td>B</td>
+</tr>
+<tr>
+<td>Less than 5 but 3 or higher</td>
+<td>C</td>
+</tr>
+<tr>
+<td>Less than 3</td>
+<td>D</td>
+</tr>
+</tbody>
+</table>
+<p>Since the <code>if</code>-<code>else</code> statement only allows branching into two possibilities, we can branch into multiple possibilities by nesting the <code>if</code>-<code>else</code> statements hierarchically.  We can first break the table down into three tables, each containing only two rows, with one row a negation of the other row.</p>
+<table>
+<thead>
+<tr>
+<th>Score</th>
+<th>Letter Grade</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>8 or higher</td>
+<td>A</td>
+</tr>
+<tr>
+<td>Less than 8</td>
+<td>See Table 1</td>
+</tr>
+</tbody>
+</table>
+<p>Table 1 (less than 8)</p>
+<table>
+<thead>
+<tr>
+<th>Score</th>
+<th>Letter Grade</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>5 or higher</td>
+<td>B</td>
+</tr>
+<tr>
+<td>Less than 5</td>
+<td>See Table 2</td>
+</tr>
+</tbody>
+</table>
+<p>Table 2 (less than 5)</p>
+<table>
+<thead>
+<tr>
+<th>Score</th>
+<th>Letter Grade</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>3 or higher</td>
+<td>C</td>
+</tr>
+<tr>
+<td>Less than 3</td>
+<td>D</td>
+</tr>
+</tbody>
+</table>
+<p>The tables above can then be written into the following function:</p>
+<div class="highlight"><pre><span></span><code><span class="kt">void</span> <span class="nf">print_score</span><span class="p">(</span><span class="kt">double</span> <span class="n">score</span><span class="p">)</span> 
+<span class="p">{</span>
+  <span class="k">if</span> <span class="p">(</span><span class="n">score</span> <span class="o">&gt;=</span> <span class="mi">8</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">cs1010_println_string</span><span class="p">(</span><span class="s">&quot;A&quot;</span><span class="p">);</span>
+  <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+    <span class="c1">// Table 1</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">score</span> <span class="o">&gt;=</span> <span class="mi">5</span><span class="p">)</span> <span class="p">{</span>
+      <span class="n">cs1010_println_string</span><span class="p">(</span><span class="s">&quot;B&quot;</span><span class="p">);</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+      <span class="c1">// Table 2</span>
+      <span class="k">if</span> <span class="p">(</span><span class="n">score</span> <span class="o">&gt;=</span> <span class="mi">3</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">cs1010_println_string</span><span class="p">(</span><span class="s">&quot;C&quot;</span><span class="p">);</span>
+      <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="n">cs1010_println_string</span><span class="p">(</span><span class="s">&quot;D&quot;</span><span class="p">);</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>There are three nested <code>if</code>-<code>else</code> in the function above.  Note how I use indentation to clearly indicate the nesting of blocks.  Such nesting or indentation is not required by C standard, but is a commonly accepted coding practice, and is required for CS1010.</p>
+<p>The code below compiles perfectly but is not as easy to read by a human as the above.</p>
+<div class="highlight"><pre><span></span><code><span class="kt">void</span> <span class="nf">print_score</span><span class="p">(</span><span class="kt">double</span> <span class="n">score</span><span class="p">)</span> 
+<span class="p">{</span>
+  <span class="k">if</span> <span class="p">(</span><span class="n">score</span> <span class="o">&gt;=</span> <span class="mi">8</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">cs1010_println_string</span><span class="p">(</span><span class="s">&quot;A&quot;</span><span class="p">);</span> <span class="p">}</span> <span class="k">else</span> <span class="p">{</span> <span class="c1">// Table 1 </span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">score</span> <span class="o">&gt;=</span> <span class="mi">5</span><span class="p">)</span> <span class="p">{</span> <span class="n">cs1010_println_string</span><span class="p">(</span><span class="s">&quot;B&quot;</span><span class="p">);</span>
+  <span class="p">}</span> <span class="k">else</span> <span class="p">{</span> <span class="c1">// Table 2</span>
+<span class="k">if</span> <span class="p">(</span><span class="n">score</span> <span class="o">&gt;=</span> <span class="mi">3</span><span class="p">)</span> <span class="p">{</span>
+  <span class="n">cs1010_println_string</span><span class="p">(</span><span class="s">&quot;C&quot;</span><span class="p">);</span>
+      <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="n">cs1010_println_string</span><span class="p">(</span><span class="s">&quot;D&quot;</span><span class="p">);</span>
+    <span class="p">}</span> <span class="p">}</span> <span class="p">}</span> <span class="p">}</span>
+<span class="c1">// Don&#39;t write code like this.</span>
+</code></pre></div>
+
+<p>There are also a couple of "first" in the sample code above:</p>
+<ul>
+<li>You see the keyword <code>void</code> for the first time.  <code>void</code> is a special type that indicates nothing.  The function <code>print_score</code> does not return anything, it accepts an input <code>score</code> and print something to screen.  As such, we say that the return type of <code>print_score</code> is <code>void</code>.</li>
+<li>You see <em>strings</em> for the first time (<code>"A"</code>, etc.).  A <em>string</em> basically is a sequence of characters.  We use double quotes <code>"</code> to mark the beginning and the end of a string, and use the CS1010 I/O library function <code>cs1010_println_string</code> to print a string to the screen. </li>
+</ul>
+<p>You can imagine that as the number of possible letter grades increases (NUS has 11), we will have many nested <code>if</code>-<code>else</code>, and the code gets complicated.  To reduce the number of nesting, we can write <code>else if</code> directly, without nesting:</p>
+<div class="highlight"><pre><span></span><code><span class="kt">void</span> <span class="nf">print_score</span><span class="p">(</span><span class="kt">double</span> <span class="n">score</span><span class="p">)</span> 
+<span class="p">{</span>
+  <span class="k">if</span> <span class="p">(</span><span class="n">score</span> <span class="o">&gt;=</span> <span class="mi">8</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">cs1010_println_string</span><span class="p">(</span><span class="s">&quot;A&quot;</span><span class="p">);</span>
+  <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">score</span> <span class="o">&gt;=</span> <span class="mi">5</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">cs1010_println_string</span><span class="p">(</span><span class="s">&quot;B&quot;</span><span class="p">);</span>
+  <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">score</span> <span class="o">&gt;=</span> <span class="mi">3</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">cs1010_println_string</span><span class="p">(</span><span class="s">&quot;C&quot;</span><span class="p">);</span>
+  <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+    <span class="n">cs1010_println_string</span><span class="p">(</span><span class="s">&quot;D&quot;</span><span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>The above code is easier to read, but has exactly the same flow as the one with nested <code>if</code>-<code>else</code> earlier.</p>
+<h2 id="avoid-skipping-the-curly-braces">Avoid Skipping the Curly Braces</h2>
+<p>The C standard says that, if the block contains only one statement, we can skip the curly braces <code>{</code> and <code>}</code>.  In the example above, we can write:</p>
+<div class="highlight"><pre><span></span><code><span class="kt">void</span> <span class="nf">print_score</span><span class="p">(</span><span class="kt">double</span> <span class="n">score</span><span class="p">)</span> 
+<span class="p">{</span>
+  <span class="k">if</span> <span class="p">(</span><span class="n">score</span> <span class="o">&gt;=</span> <span class="mi">8</span><span class="p">)</span> 
+    <span class="n">cs1010_println_string</span><span class="p">(</span><span class="s">&quot;A&quot;</span><span class="p">);</span>
+  <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">score</span> <span class="o">&gt;=</span> <span class="mi">5</span><span class="p">)</span>
+    <span class="n">cs1010_println_string</span><span class="p">(</span><span class="s">&quot;B&quot;</span><span class="p">);</span>
+  <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">score</span> <span class="o">&gt;=</span> <span class="mi">3</span><span class="p">)</span>
+    <span class="n">cs1010_println_string</span><span class="p">(</span><span class="s">&quot;C&quot;</span><span class="p">);</span>
+  <span class="k">else</span>
+    <span class="n">cs1010_println_string</span><span class="p">(</span><span class="s">&quot;D&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>Despite being allowed by the C standard, this is considered a bad practice, and should be avoided.  Imagine some time later, you go back to this code, and want to write something extra:</p>
+<div class="highlight"><pre><span></span><code><span class="kt">void</span> <span class="nf">print_score</span><span class="p">(</span><span class="kt">double</span> <span class="n">score</span><span class="p">)</span> 
+<span class="p">{</span>
+  <span class="k">if</span> <span class="p">(</span><span class="n">score</span> <span class="o">&gt;=</span> <span class="mi">8</span><span class="p">)</span> 
+    <span class="n">cs1010_println_string</span><span class="p">(</span><span class="s">&quot;A&quot;</span><span class="p">);</span>
+  <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">score</span> <span class="o">&gt;=</span> <span class="mi">5</span><span class="p">)</span>
+    <span class="n">cs1010_println_string</span><span class="p">(</span><span class="s">&quot;B&quot;</span><span class="p">);</span>
+  <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">score</span> <span class="o">&gt;=</span> <span class="mi">3</span><span class="p">)</span>
+    <span class="n">cs1010_println_string</span><span class="p">(</span><span class="s">&quot;C&quot;</span><span class="p">);</span>
+  <span class="k">else</span>
+    <span class="n">cs1010_println_string</span><span class="p">(</span><span class="s">&quot;You can do better!&quot;</span><span class="p">);</span>
+    <span class="n">cs1010_println_string</span><span class="p">(</span><span class="s">&quot;D&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>What would be printed?</p>
+<p>The famous <a href="https://www.wired.com/2014/02/gotofail/">Apple <code>goto fail</code> bug</a> wouldn't have happened in the there is a pair of curly braces added!</p>
+<p>Alternatively, if you have code like this:</p>
+<div class="highlight"><pre><span></span><code><span class="k">if</span> <span class="p">(</span><span class="n">score</span> <span class="o">&gt;=</span> <span class="mi">8</span><span class="p">)</span>
+  <span class="k">if</span> <span class="p">(</span><span class="n">late_penalty</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">)</span> 
+      <span class="n">cs1010_println_string</span><span class="p">(</span><span class="s">&quot;late submission&quot;</span><span class="p">);</span>
+<span class="k">else</span> 
+  <span class="nf">cs1010_println_string</span><span class="p">(</span><span class="s">&quot;you can do better!&quot;</span><span class="p">);</span>
+</code></pre></div>
+
+<p>It might look like <code>you can do better!</code> will be printed if <code>score</code> is less than 8, but actually, <code>you can do better!</code> will be printed if the <code>score</code> is larger or equal to 8 and there is no late penalty, which is not what is intended.</p>
+<h2 id="conditional-operator">Conditional Operator</h2>
+<p>The conditional operator consists of two special characters <code>?</code> and <code>:</code> and is used in the format of:</p>
+<div class="highlight"><pre><span></span><code>condition ? true expression : false expression;
+</code></pre></div>
+
+<p>If the <code>condition</code> evaluates to true, then the <code>true expression</code> will be evaluated and returned, otherwise, the <code>false expression</code> will be evaluated and returned.</p>
+<p>The conditional operator allows us to replace</p>
+<div class="highlight"><pre><span></span><code><span class="k">if</span> <span class="p">(</span><span class="n">x</span> <span class="o">&gt;</span> <span class="n">y</span><span class="p">)</span> <span class="p">{</span>
+  <span class="n">max</span> <span class="o">=</span> <span class="n">x</span><span class="p">;</span>
+<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+  <span class="n">max</span> <span class="o">=</span> <span class="n">y</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>with a single line:</p>
+<div class="highlight"><pre><span></span><code>max = (x &gt; y) ? x : y;
+</code></pre></div>
+
+<p>We can nest the conditional operator as well, but it does not necessarily make your code easier to read once you start nesting them up.  We do not encourage you to nest the conditional operator in CS1010 and to limit its usage to simple cases above.</p>
+<h2 id="comparing-real-numbers">Comparing Real Numbers</h2>
+<p>Recall that we said <a href="https://nus-cs1010.github.io/1819-s1/04-type/index.html#real-numbers">real numbers cannot be represented exactly in computers</a>.  Comparing real numbers, therefore, becomes a little bit trickier in programming.  The <code>if</code> statement</p>
+<div class="highlight"><pre><span></span><code><span class="kt">double</span> <span class="n">expected_value</span> <span class="o">=</span> <span class="mf">0.3</span><span class="p">;</span>
+<span class="kt">double</span> <span class="n">sum</span> <span class="o">=</span> <span class="mf">0.1</span> <span class="o">+</span> <span class="mf">0.2</span><span class="p">;</span>
+<span class="k">if</span> <span class="p">(</span><span class="n">sum</span> <span class="o">==</span> <span class="n">expected_value</span><span class="p">)</span> <span class="p">{</span>
+ <span class="o">:</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>would not be evaluated as <code>true</code> as expected!</p>
+<p>Thus, to compare real numbers, we normally allow some errors in comparisons -- we want the absolute difference between <code>sum</code> and <code>expected_value</code> to be small enough.</p>
+<div class="highlight"><pre><span></span><code><span class="kt">double</span> <span class="n">expected_value</span> <span class="o">=</span> <span class="mf">0.3</span><span class="p">;</span>
+<span class="kt">double</span> <span class="n">sum</span> <span class="o">=</span> <span class="mf">0.1</span> <span class="o">+</span> <span class="mf">0.2</span><span class="p">;</span>
+<span class="k">if</span> <span class="p">(</span><span class="n">fabs</span><span class="p">(</span><span class="n">sum</span> <span class="o">-</span> <span class="n">expected_value</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mf">0.000001</span><span class="p">)</span> <span class="p">{</span>
+ <span class="o">:</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<h2 id="problem-sets">Problem Sets</h2>
+<h3 id="problem-81">Problem 8.1</h3>
+<p>(a) Do the following two functions behave the same way?  Explain.</p>
+<div class="highlight"><pre><span></span><code><span class="kt">long</span> <span class="nf">factorial</span><span class="p">(</span><span class="kt">long</span> <span class="n">n</span><span class="p">)</span> 
+<span class="p">{</span>
+  <span class="k">if</span> <span class="p">(</span><span class="n">n</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="mi">1</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="k">return</span> <span class="n">n</span> <span class="o">*</span> <span class="n">factorial</span><span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="kt">long</span> <span class="nf">factorial</span><span class="p">(</span><span class="kt">long</span> <span class="n">n</span><span class="p">)</span> 
+<span class="p">{</span>
+  <span class="k">if</span> <span class="p">(</span><span class="n">n</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="mi">1</span><span class="p">;</span>
+  <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="n">n</span> <span class="o">*</span> <span class="n">factorial</span><span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>(b) How about:</p>
+<div class="highlight"><pre><span></span><code><span class="kt">long</span> <span class="nf">factorial</span><span class="p">(</span><span class="kt">long</span> <span class="n">n</span><span class="p">)</span> 
+<span class="p">{</span>
+  <span class="kt">long</span> <span class="n">result</span><span class="p">;</span>
+  <span class="k">if</span> <span class="p">(</span><span class="n">n</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="n">result</span> <span class="o">=</span> <span class="n">n</span> <span class="o">*</span> <span class="n">factorial</span><span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">);</span>
+  <span class="k">return</span> <span class="n">result</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>and </p>
+<div class="highlight"><pre><span></span><code><span class="kt">long</span> <span class="nf">factorial</span><span class="p">(</span><span class="kt">long</span> <span class="n">n</span><span class="p">)</span> 
+<span class="p">{</span>
+  <span class="kt">long</span> <span class="n">result</span><span class="p">;</span>
+  <span class="k">if</span> <span class="p">(</span><span class="n">n</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+  <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">n</span> <span class="o">*</span> <span class="n">factorial</span><span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">);</span>
+  <span class="p">}</span>
+  <span class="k">return</span> <span class="n">result</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<h3 id="problem-82">Problem 8.2</h3>
+<p>Draw the flowchart for the code snippet</p>
+<div class="highlight"><pre><span></span><code><span class="k">if</span> <span class="p">(</span><span class="n">x</span> <span class="o">&gt;</span> <span class="n">y</span><span class="p">)</span> <span class="p">{</span>
+  <span class="n">max</span> <span class="o">=</span> <span class="n">x</span><span class="p">;</span>
+<span class="p">}</span> 
+<span class="k">if</span> <span class="p">(</span><span class="n">x</span> <span class="o">&lt;</span> <span class="n">y</span><span class="p">)</span> <span class="p">{</span>
+  <span class="n">max</span> <span class="o">=</span> <span class="n">y</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="k">if</span> <span class="p">(</span><span class="n">x</span> <span class="o">==</span> <span class="n">y</span><span class="p">)</span> <span class="p">{</span>
+  <span class="n">max</span> <span class="o">=</span> <span class="n">y</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>and</p>
+<div class="highlight"><pre><span></span><code><span class="k">if</span> <span class="p">(</span><span class="n">x</span> <span class="o">&gt;</span> <span class="n">y</span><span class="p">)</span> <span class="p">{</span>
+  <span class="n">max</span> <span class="o">=</span> <span class="n">x</span><span class="p">;</span>
+<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+  <span class="n">max</span> <span class="o">=</span> <span class="n">y</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<h3 id="problem-83">Problem 8.3</h3>
+<p>Suppose we break down the table below in a slightly different way.</p>
+<table>
+<thead>
+<tr>
+<th>Score</th>
+<th>Letter Grade</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>8 or higher</td>
+<td>A</td>
+</tr>
+<tr>
+<td>Less than 8 but 5 or higher</td>
+<td>B</td>
+</tr>
+<tr>
+<td>Less than 5 but 3 or higher</td>
+<td>C</td>
+</tr>
+<tr>
+<td>Less than 3</td>
+<td>D</td>
+</tr>
+</tbody>
+</table>
+<p>We rewrite the tables into three smaller tables, as:</p>
+<table>
+<thead>
+<tr>
+<th>Score</th>
+<th>Letter Grade</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>5 or higher</td>
+<td>See Table 3</td>
+</tr>
+<tr>
+<td>Less than 5</td>
+<td>See Table 4</td>
+</tr>
+</tbody>
+</table>
+<p>where Table 3 (5 or higher) is</p>
+<table>
+<thead>
+<tr>
+<th>Score</th>
+<th>Letter Grade</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>8 or higher</td>
+<td>A</td>
+</tr>
+<tr>
+<td>Less than 8</td>
+<td>B</td>
+</tr>
+</tbody>
+</table>
+<p>and Table 4 (less than 5) is</p>
+<table>
+<thead>
+<tr>
+<th>Score</th>
+<th>Letter Grade</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>3 or higher</td>
+<td>C</td>
+</tr>
+<tr>
+<td>Less than 3</td>
+<td>D</td>
+</tr>
+</tbody>
+</table>
+<p>Write the corresponding <code>if</code>-<code>else</code> statements to print out the letter grade based on the tables above.</p>
+<h2 id="appendix-code-from-lecture">Appendix: Code From Lecture</h2>
+<p>Here are the C files that Wei Tsang wrote during the lecture.</p>
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span> <span class="cpf">&quot;cs1010.h&quot;</span><span class="cp"></span>
+
+<span class="kt">long</span> <span class="nf">factorial</span><span class="p">(</span><span class="kt">long</span> <span class="n">n</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="k">if</span> <span class="p">(</span><span class="n">n</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="mi">1</span><span class="p">;</span>
+  <span class="p">}</span> 
+  <span class="k">return</span> <span class="n">n</span> <span class="o">*</span> <span class="n">factorial</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+  <span class="kt">long</span> <span class="n">n</span> <span class="o">=</span> <span class="n">cs1010_read_long</span><span class="p">();</span>
+  <span class="kt">long</span> <span class="n">fac</span> <span class="o">=</span> <span class="n">factorial</span><span class="p">(</span><span class="n">n</span><span class="p">);</span>
+  <span class="n">cs1010_println_long</span><span class="p">(</span><span class="n">fac</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span> <span class="cpf">&quot;cs1010.h&quot;</span><span class="cp"></span>
+
+<span class="kt">long</span> <span class="nf">max</span><span class="p">(</span><span class="kt">long</span> <span class="n">x</span><span class="p">,</span> <span class="kt">long</span> <span class="n">y</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="k">if</span> <span class="p">(</span><span class="n">x</span> <span class="o">&gt;</span> <span class="n">y</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="n">x</span><span class="p">;</span>
+  <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="n">y</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="c1">// alternatively, using the conditional operator ? :</span>
+  <span class="c1">// return (x &gt; y) ? x : y;</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+  <span class="kt">long</span> <span class="n">x</span> <span class="o">=</span> <span class="n">cs1010_read_long</span><span class="p">();</span>
+  <span class="kt">long</span> <span class="n">y</span> <span class="o">=</span> <span class="n">cs1010_read_long</span><span class="p">();</span>
+  <span class="kt">long</span> <span class="n">m</span> <span class="o">=</span> <span class="n">max</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">);</span>
+  <span class="n">cs1010_println_long</span><span class="p">(</span><span class="n">m</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span> <span class="cpf">&quot;cs1010.h&quot;</span><span class="cp"></span>
+
+<span class="kt">void</span> <span class="nf">print_score</span><span class="p">(</span><span class="kt">double</span> <span class="n">x</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="k">if</span> <span class="p">(</span><span class="n">x</span> <span class="o">&gt;=</span> <span class="mi">8</span><span class="p">)</span>
+    <span class="n">cs1010_println_string</span><span class="p">(</span><span class="s">&quot;A&quot;</span><span class="p">);</span>
+  <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">x</span> <span class="o">&gt;=</span> <span class="mi">5</span><span class="p">)</span>
+    <span class="n">cs1010_println_string</span><span class="p">(</span><span class="s">&quot;B&quot;</span><span class="p">);</span>
+  <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">x</span> <span class="o">&gt;=</span> <span class="mi">3</span><span class="p">)</span>
+    <span class="n">cs1010_println_string</span><span class="p">(</span><span class="s">&quot;C&quot;</span><span class="p">);</span>
+  <span class="k">else</span>
+    <span class="n">cs1010_println_string</span><span class="p">(</span><span class="s">&quot;D&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+  <span class="kt">double</span> <span class="n">score</span> <span class="o">=</span> <span class="n">cs1010_read_double</span><span class="p">();</span>
+  <span class="n">print_score</span><span class="p">(</span><span class="n">score</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="07-arithmetic-ops.html" title="7. Arithmetic Operations" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                7. Arithmetic Operations
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="09-logical-exp.html" title="9. Logical Expression" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                9. Logical Expression
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z" /></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright by Department of Computer Science, National University of Singapore 2018
+          </div>
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="assets/javascripts/vendor.f81b9e8b.min.js"></script>
+      <script src="assets/javascripts/bundle.23546af0.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+      
+      <script>
+        app = initialize({
+          base: ".",
+          features: [],
+          search: Object.assign({
+            worker: "assets/javascripts/worker/search.58d22e8e.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+      
+    
+  </body>
+</html>

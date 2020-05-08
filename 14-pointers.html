@@ -9,7 +9,7 @@
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
       
-        <link rel="canonical" href="https://www.comp.nus.edu.sg/~ooiwt/cs1010/1819s1/index.html">
+        <link rel="canonical" href="https://www.comp.nus.edu.sg/~ooiwt/cs1010/1819s1/14-pointers.html">
       
       
       <link rel="shortcut icon" href="assets/images/favicon.png">
@@ -17,7 +17,7 @@
     
     
       
-        <title>Home - CS1010 Programming Methodology</title>
+        <title>14. Pointers - CS1010 Programming Methodology</title>
       
     
     
@@ -58,7 +58,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#cs1010" class="md-skip">
+        <a href="#unit-14-memory-addresses-or-pointers" class="md-skip">
           Skip to content
         </a>
       
@@ -86,7 +86,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Home
+              14. Pointers
             
           </span>
         </div>
@@ -158,329 +158,11 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        Home
-        <span class="md-nav__icon md-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3,9H17V7H3V9M3,13H17V11H3V13M3,17H17V15H3V17M19,17H21V15H19V17M19,7V9H21V7H19M19,13H21V11H19V13Z" /></svg>
-        </span>
-      </label>
-    
-    <a href="index.html" title="Home" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="index.html" title="Home" class="md-nav__link">
       Home
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
-      </span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#whats-new" class="md-nav__link">
-    What's New
-  </a>
-  
-    <nav class="md-nav" aria-label="What's New">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#final-assessment-comments-and-answer-keys" class="md-nav__link">
-    Final Assessment: Comments and Answer Keys
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#assignment-9-comments-and-answer-keys" class="md-nav__link">
-    Assignment 9: Comments and Answer Keys
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#assignment-8-comments-and-answer-keys" class="md-nav__link">
-    Assignment 8: Comments and Answer Keys
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#pe2-answer-keys" class="md-nav__link">
-    PE2 Answer Keys
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#pe1-comments-and-answer-keys" class="md-nav__link">
-    PE1 Comments and Answer Keys
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#lecture-12" class="md-nav__link">
-    Lecture 12
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#lecture-11" class="md-nav__link">
-    Lecture 11
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#piazza-qa" class="md-nav__link">
-    Piazza Q&amp;A
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#notes-and-lectures" class="md-nav__link">
-    Notes and Lectures
-  </a>
-  
-    <nav class="md-nav" aria-label="Notes and Lectures">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#lecture-11_1" class="md-nav__link">
-    Lecture 11
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#lecture-10" class="md-nav__link">
-    Lecture 10
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#lecture-9" class="md-nav__link">
-    Lecture 9
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#lecture-8" class="md-nav__link">
-    Lecture 8
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#lecture-7" class="md-nav__link">
-    Lecture 7
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#lecture-6" class="md-nav__link">
-    Lecture 6
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#lecture-5" class="md-nav__link">
-    Lecture 5
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#lecture-4" class="md-nav__link">
-    Lecture 4
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#lecture-3" class="md-nav__link">
-    Lecture 3
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#lecture-2" class="md-nav__link">
-    Lecture 2
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#lecture-1" class="md-nav__link">
-    Lecture 1
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#programming-exercises" class="md-nav__link">
-    Programming Exercises
-  </a>
-  
-    <nav class="md-nav" aria-label="Programming Exercises">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#exercise-5-square-escape-magicsquare" class="md-nav__link">
-    Exercise 5: Square, Escape, MagicSquare
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#exercise-4-id-grade-index-max" class="md-nav__link">
-    Exercise 4: ID, Grade, Index, Max
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#exercise-3-binary-rectangle-fibonacci-prime" class="md-nav__link">
-    Exercise 3: Binary, Rectangle, Fibonacci, Prime
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#exercise-2-leap-suffix-days" class="md-nav__link">
-    Exercise 2: Leap, Suffix, Days
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#exercise-1-freezer" class="md-nav__link">
-    Exercise 1: Freezer
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#programming-assignments" class="md-nav__link">
-    Programming Assignments
-  </a>
-  
-    <nav class="md-nav" aria-label="Programming Assignments">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#assignment-9-digits" class="md-nav__link">
-    Assignment 9: Digits
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#assignment-8-maze-fill" class="md-nav__link">
-    Assignment 8: Maze, Fill
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#assignment-7-peak-scripts-inversion" class="md-nav__link">
-    Assignment 7: Peak, Scripts, Inversion
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#assignment-6-permutation-1-2-3" class="md-nav__link">
-    Assignment 6: Permutation 1 2 3
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#assignment-5-social-life" class="md-nav__link">
-    Assignment 5: Social, Life
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#assignment-4-selectionsort-add-mastermind" class="md-nav__link">
-    Assignment 4: SelectionSort, Add, Mastermind
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#assignment-3-kendall-histogram-countingsort" class="md-nav__link">
-    Assignment 3: Kendall, Histogram, CountingSort
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#assignment-2-collatz-weekday-circle-pattern" class="md-nav__link">
-    Assignment 2: Collatz, Weekday, Circle, Pattern
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#assignment-1-invest-box-digits-and-taxi" class="md-nav__link">
-    Assignment 1: Invest, Box, Digits, and Taxi
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
     
@@ -668,10 +350,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" checked>
     
     <label class="md-nav__link" for="nav-5">
       Notes
@@ -849,11 +533,115 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="14-pointers.html" title="14. Pointers" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        14. Pointers
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3,9H17V7H3V9M3,13H17V11H3V13M3,17H17V15H3V17M19,17H21V15H19V17M19,7V9H21V7H19M19,13H21V11H19V13Z" /></svg>
+        </span>
+      </label>
+    
+    <a href="14-pointers.html" title="14. Pointers" class="md-nav__link md-nav__link--active">
       14. Pointers
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#the-address-of-operator" class="md-nav__link">
+    The Address-of Operator
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-deference-operator" class="md-nav__link">
+    The Deference Operator
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#changing-the-value-via-pointer" class="md-nav__link">
+    Changing the Value via Pointer
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#basic-rules-about-using-pointers" class="md-nav__link">
+    Basic Rules About Using Pointers
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pointer-of-pointer-of-pointer" class="md-nav__link">
+    Pointer of Pointer (of Pointer..)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-null-pointer" class="md-nav__link">
+    The NULL Pointer
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#problem-set-14" class="md-nav__link">
+    Problem Set 14
+  </a>
+  
+    <nav class="md-nav" aria-label="Problem Set 14">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#problem-141" class="md-nav__link">
+    Problem 14.1
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#problem-142" class="md-nav__link">
+    Problem 14.2
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -1620,279 +1408,65 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#whats-new" class="md-nav__link">
-    What's New
-  </a>
-  
-    <nav class="md-nav" aria-label="What's New">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#final-assessment-comments-and-answer-keys" class="md-nav__link">
-    Final Assessment: Comments and Answer Keys
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#assignment-9-comments-and-answer-keys" class="md-nav__link">
-    Assignment 9: Comments and Answer Keys
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#assignment-8-comments-and-answer-keys" class="md-nav__link">
-    Assignment 8: Comments and Answer Keys
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#pe2-answer-keys" class="md-nav__link">
-    PE2 Answer Keys
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#pe1-comments-and-answer-keys" class="md-nav__link">
-    PE1 Comments and Answer Keys
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#lecture-12" class="md-nav__link">
-    Lecture 12
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#lecture-11" class="md-nav__link">
-    Lecture 11
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#piazza-qa" class="md-nav__link">
-    Piazza Q&amp;A
+  <a href="#the-address-of-operator" class="md-nav__link">
+    The Address-of Operator
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#notes-and-lectures" class="md-nav__link">
-    Notes and Lectures
+  <a href="#the-deference-operator" class="md-nav__link">
+    The Deference Operator
   </a>
-  
-    <nav class="md-nav" aria-label="Notes and Lectures">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#lecture-11_1" class="md-nav__link">
-    Lecture 11
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#lecture-10" class="md-nav__link">
-    Lecture 10
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#lecture-9" class="md-nav__link">
-    Lecture 9
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#lecture-8" class="md-nav__link">
-    Lecture 8
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#lecture-7" class="md-nav__link">
-    Lecture 7
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#lecture-6" class="md-nav__link">
-    Lecture 6
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#lecture-5" class="md-nav__link">
-    Lecture 5
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#lecture-4" class="md-nav__link">
-    Lecture 4
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#lecture-3" class="md-nav__link">
-    Lecture 3
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#lecture-2" class="md-nav__link">
-    Lecture 2
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#lecture-1" class="md-nav__link">
-    Lecture 1
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#programming-exercises" class="md-nav__link">
-    Programming Exercises
+  <a href="#changing-the-value-via-pointer" class="md-nav__link">
+    Changing the Value via Pointer
   </a>
-  
-    <nav class="md-nav" aria-label="Programming Exercises">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#exercise-5-square-escape-magicsquare" class="md-nav__link">
-    Exercise 5: Square, Escape, MagicSquare
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#exercise-4-id-grade-index-max" class="md-nav__link">
-    Exercise 4: ID, Grade, Index, Max
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#exercise-3-binary-rectangle-fibonacci-prime" class="md-nav__link">
-    Exercise 3: Binary, Rectangle, Fibonacci, Prime
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#exercise-2-leap-suffix-days" class="md-nav__link">
-    Exercise 2: Leap, Suffix, Days
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#exercise-1-freezer" class="md-nav__link">
-    Exercise 1: Freezer
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#programming-assignments" class="md-nav__link">
-    Programming Assignments
+  <a href="#basic-rules-about-using-pointers" class="md-nav__link">
+    Basic Rules About Using Pointers
   </a>
   
-    <nav class="md-nav" aria-label="Programming Assignments">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pointer-of-pointer-of-pointer" class="md-nav__link">
+    Pointer of Pointer (of Pointer..)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-null-pointer" class="md-nav__link">
+    The NULL Pointer
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#problem-set-14" class="md-nav__link">
+    Problem Set 14
+  </a>
+  
+    <nav class="md-nav" aria-label="Problem Set 14">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#assignment-9-digits" class="md-nav__link">
-    Assignment 9: Digits
+  <a href="#problem-141" class="md-nav__link">
+    Problem 14.1
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#assignment-8-maze-fill" class="md-nav__link">
-    Assignment 8: Maze, Fill
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#assignment-7-peak-scripts-inversion" class="md-nav__link">
-    Assignment 7: Peak, Scripts, Inversion
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#assignment-6-permutation-1-2-3" class="md-nav__link">
-    Assignment 6: Permutation 1 2 3
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#assignment-5-social-life" class="md-nav__link">
-    Assignment 5: Social, Life
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#assignment-4-selectionsort-add-mastermind" class="md-nav__link">
-    Assignment 4: SelectionSort, Add, Mastermind
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#assignment-3-kendall-histogram-countingsort" class="md-nav__link">
-    Assignment 3: Kendall, Histogram, CountingSort
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#assignment-2-collatz-weekday-circle-pattern" class="md-nav__link">
-    Assignment 2: Collatz, Weekday, Circle, Pattern
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#assignment-1-invest-box-digits-and-taxi" class="md-nav__link">
-    Assignment 1: Invest, Box, Digits, and Taxi
+  <a href="#problem-142" class="md-nav__link">
+    Problem 14.2
   </a>
   
 </li>
@@ -1918,124 +1492,217 @@
                   
                 
                 
-                <h1 id="cs1010">CS1010</h1>
-<h2 id="whats-new">What's New</h2>
-<h3 id="final-assessment-comments-and-answer-keys"><a href="https://www.comp.nus.edu.sg/~ooiwt/cs1010/1819s1/final.pdf">Final Assessment: Comments and Answer Keys</a></h3>
-<h3 id="assignment-9-comments-and-answer-keys"><a href="as09-comments.html">Assignment 9: Comments and Answer Keys</a></h3>
-<h3 id="assignment-8-comments-and-answer-keys"><a href="as08-comments.html">Assignment 8: Comments and Answer Keys</a></h3>
-<h3 id="pe2-answer-keys"><a href="pe2-comments.html">PE2 Answer Keys</a></h3>
-<h3 id="pe1-comments-and-answer-keys"><a href="pe1-comments.html">PE1 Comments and Answer Keys</a></h3>
-<p>Updated for <code>digits</code> and <code>square</code>.</p>
-<h3 id="lecture-12">Lecture 12</h3>
+                <h1 id="unit-14-memory-addresses-or-pointers">Unit 14: Memory Addresses or Pointers</h1>
+<p>Every memory location has an address.  Unlike many higher level languages, such as Java, Python, and JavaScript, C allows us direct access to memory addresses.  This empowers programmers to do wonderful things that cannot be done in other languages.  But, it is also dangerous at the same time -- using it improperly can lead to bugs that are hard to track down and debug.</p>
+<h2 id="the-address-of-operator">The Address-of Operator</h2>
+<p>C has an operator called "address-of", denoted by <code>&amp;</code>.  This operator, returns, well, the address of a variable.</p>
+<p>We can type cast the address of a variable into <code>long</code> and print it out to examine its value.  Consider this:</p>
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span> <span class="cpf">&quot;cs1010.h&quot;</span><span class="cp"></span>
+
+<span class="kt">void</span> <span class="nf">add</span><span class="p">(</span><span class="kt">long</span> <span class="n">sum</span><span class="p">,</span> <span class="kt">long</span> <span class="n">a</span><span class="p">,</span> <span class="kt">long</span> <span class="n">b</span><span class="p">)</span> <span class="p">{</span>
+  <span class="n">sum</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="p">;</span>
+  <span class="n">cs1010_println_long</span><span class="p">((</span><span class="kt">long</span><span class="p">)</span><span class="o">&amp;</span><span class="n">sum</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+  <span class="kt">long</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+  <span class="kt">long</span> <span class="n">sum</span><span class="p">;</span>
+  <span class="n">add</span><span class="p">(</span><span class="n">sum</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="mi">10</span><span class="p">);</span>
+  <span class="n">cs1010_println_long</span><span class="p">((</span><span class="kt">long</span><span class="p">)</span><span class="o">&amp;</span><span class="n">sum</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>Running the program above prints something like this:
+<div class="highlight"><pre><span></span><code>140723025685528
+140723025685552
+</code></pre></div></p>
+<p>Your results will most likely be different, since the OS allocates different regions of the memory to this program every time it is run.  </p>
+<p><img alt="pointers" src="figures/pointers/pointers.001.png" /></p>
+<h2 id="the-deference-operator">The Deference Operator</h2>
+<p>The dereference operator is the reversed of address-of, and is denoted by <code>*</code>.  I call it "location-of-address".  We use this operator in two places:</p>
 <ul>
-<li><a href="https://www.comp.nus.edu.sg/~ooiwt/cs1010/1819s1/slides/cs1010-lec12.pdf">Slides</a>  | <a href="https://vimeo.com/301369047">Screencast</a></li>
+<li>to declare an "address" variable, and</li>
+<li>to reference the location of an address.</li>
 </ul>
-<p>In this lecture, we will review what we have covered in CS1010 as well as to peak ahead to give you a teaser of CS2040C.  There is no notes for this lecture.</p>
-<h3 id="lecture-11">Lecture 11</h3>
-<ul>
-<li><a href="https://vimeo.com/299856036">Screencast</a> (complete)</li>
-</ul>
-<p>In this lecture, we discussed a few C specific topics: <code>struct</code>, <code>typedef</code>, <code>printf</code>, and <code>scanf</code>.  We covered <a href="28-struct.html">Unit 28</a> and <a href="29-stdio.html">Unit 29</a>.</p>
+<p>We can declare a variable that is an address type.  We need to tell C the type of the variable this address is referencing.  For instance,</p>
+<div class="highlight"><pre><span></span><code><span class="kt">double</span> <span class="o">*</span><span class="n">addr</span><span class="p">;</span>
+</code></pre></div>
+
+<p>declares a variable <code>addr</code> that is an address to a variable of type <code>double</code>.  The way to read this is that <code>*addr</code>, or location-of-address <code>addr</code> is of type <code>double</code>, so <code>addr</code> is an address of a location containing a <code>double</code>.</p>
+<div class="admonition warn">
+<p class="admonition-title">Common Bug</p>
+<p>It is possible to write as
+<div class="highlight"><pre><span></span><code><span class="kt">double</span><span class="o">*</span> <span class="n">addr</span><span class="p">;</span>
+</code></pre></div>
+too, but this is not recommended.  Suppose you want to declare two addresses, you might write,
+<div class="highlight"><pre><span></span><code><span class="kt">double</span><span class="o">*</span> <span class="n">from_addr</span><span class="p">,</span> <span class="n">to_addr</span><span class="p">;</span>
+</code></pre></div>
+thinking that both <code>from_addr</code> and <code>to_addr</code> are of type <code>double*</code>.  But, actually, C treats <code>to_addr</code> as a <code>double</code>, not an address of a <code>double</code>!  In any case, if you follow CS1010 style, you shouldn't be declaring two variables in one line.</p>
+</div>
+<p>Another name for a variable of type address is <em>pointer</em>.  We can visualize a pointer as pointing to some location in the memory.</p>
+<h2 id="changing-the-value-via-pointer">Changing the Value via Pointer</h2>
+<p>Suppose we declare a pointer to a <code>double</code> variable (or, for short, a <code>double</code> pointer):
+<div class="highlight"><pre><span></span><code><span class="kt">double</span> <span class="o">*</span><span class="n">addr</span><span class="p">;</span>
+</code></pre></div></p>
+<p>We can use <code>*addr</code> just like a normal <code>double</code> variable:
+<div class="highlight"><pre><span></span><code><span class="o">*</span><span class="n">addr</span> <span class="o">=</span> <span class="mf">1.0</span><span class="p">;</span>
+</code></pre></div></p>
+<p>The line above means that, <em>we take the address stored in addr, go to the location at that address, and store the value 1.0 in the location.</em></p>
+<p>This is where things can get dangerous.  You could be changing the value in a memory location that you do not mean to.  If you are lucky, your program crashes with a <code>segmentation fault</code> error<sup id="fnref:2"><a class="footnote-ref" href="#fn:2">1</a></sup>. We say that your program has segfault.  If you are unlucky, your program runs normally but produces incorrect output occasionally.</p>
+<p><img alt="pointers" src="figures/pointers/pointers.002.png" /></p>
+<p>So, <em>always make sure that your pointer is pointing to the right location before dereferencing and writing to the location.</em></p>
+<p>In the code above, if we write:
+<div class="highlight"><pre><span></span><code><span class="kt">double</span> <span class="o">*</span><span class="n">addr</span><span class="p">;</span>
+<span class="o">*</span><span class="n">addr</span> <span class="o">=</span> <span class="mf">1.0</span><span class="p">;</span>
+</code></pre></div></p>
+<p>back-to-back, the program will almost certainly segfault, because the pointer variable <code>addr</code> is not initialized, so it is pointing to the location of whatever address happens to be in the memory at that time.</p>
+<p>We should point addr to a value location first, like this:
+<div class="highlight"><pre><span></span><code><span class="kt">double</span> <span class="n">c</span><span class="p">;</span>
+<span class="kt">double</span> <span class="o">*</span><span class="n">addr</span><span class="p">;</span>
+<span class="n">addr</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">c</span><span class="p">;</span>
+<span class="o">*</span><span class="n">addr</span> <span class="o">=</span> <span class="mf">1.0</span><span class="p">;</span>
+</code></pre></div></p>
+<p><img alt="pointers" src="figures/pointers/pointers.003.png" /></p>
+<p>Of course, the above could be simply written as:
+<div class="highlight"><pre><span></span><code><span class="kt">double</span> <span class="n">c</span> <span class="o">=</span> <span class="mf">1.0</span><span class="p">;</span>
+</code></pre></div></p>
+<p>I am just doing it the complicated way (which you should avoid unless you have good reasons to do so) to demonstrate the concept of pointers.</p>
+<h2 id="basic-rules-about-using-pointers">Basic Rules About Using Pointers</h2>
+<ol>
+<li>
+<p>When we use pointers, it must point to the variable of the same type as that declared by the pointer.  For instance,</p>
+<div class="highlight"><pre><span></span><code><span class="kt">double</span> <span class="n">pi</span> <span class="o">=</span> <span class="mf">3.1415926</span><span class="p">;</span>
+<span class="kt">long</span> <span class="n">radius</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
+<span class="kt">double</span> <span class="o">*</span><span class="n">addr</span><span class="p">;</span>
+<span class="n">addr</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">pi</span><span class="p">;</span> <span class="c1">// ok</span>
+<span class="n">addr</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">radius</span><span class="p">;</span> <span class="c1">// not ok</span>
+</code></pre></div>
+
+<p>Line 4 above would lead to a compilation error since we try to point a <code>double</code> pointer to a <code>long</code>.  </p>
+</li>
+<li>
+<p>We cannot change the address of a variable.  For instance</p>
+<div class="highlight"><pre><span></span><code><span class="kt">long</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+<span class="kt">long</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+<span class="o">&amp;</span><span class="n">x</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">y</span><span class="p">;</span>
+</code></pre></div>
+
+<p>We try to set the address of <code>x</code> to be the address of <code>y</code>.  This is not allowed since allocation of variables in the memory is determined by the OS, a process we have no control over.</p>
+</li>
+<li>
+<p>We can perform arithmetic operations on pointers, but not in the way you expect.</p>
+<p>Suppose we have a pointer:
+<div class="highlight"><pre><span></span><code><span class="kt">long</span> <span class="n">x</span><span class="p">;</span>
+<span class="kt">long</span> <span class="o">*</span><span class="n">ptr</span><span class="p">;</span>
+<span class="n">x</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+<span class="n">ptr</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">x</span><span class="p">;</span>
+<span class="n">ptr</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">;</span>
+</code></pre></div></p>
+<p>Suppose that <code>x</code> is stored in memory address 1000, after Line 4, <code>ptr</code> would have the value of 1000.
+After the line <code>ptr += 1</code>, using normal arithmetic operation, we would think that <code>ptr</code> will have the value of 1001.  However, the semantic for arithmetic operation is different for pointers.  The <code>+</code> operation for <code>ptr</code> causes the <code>ptr</code> variable to move forward by the size of the variable pointed to by the pointer.  In this example, <code>ptr</code> points to <code>long</code>, assuming that <code>long</code> is 8 bytes, after <code>ptr += 1</code>, <code>ptr</code> will have the value of 1008.</p>
+<p>We can only do addition and subtraction for pointers.</p>
+</li>
+</ol>
+<h2 id="pointer-of-pointer-of-pointer">Pointer of Pointer (of Pointer..)</h2>
+<p>A pointer variable is also stored in the memory, so it itself has an address too.</p>
+<div class="highlight"><pre><span></span><code><span class="kt">long</span> <span class="n">x</span><span class="p">;</span>
+<span class="kt">long</span> <span class="o">*</span><span class="n">ptr</span><span class="p">;</span>
+<span class="n">ptr</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">x</span><span class="p">;</span>
+</code></pre></div>
+
+<p>For instance, in the above, <code>ptr</code> would have a memory location allocated on the stack too, and so it itself has an address, and we can have a variable <code>ptrptr</code> referring to the address of <code>ptr</code>.  What would the type of this variable be?  Since <code>ptr</code> is an address of <code>long</code>, <code>ptrptr</code> is an address of an address of <code>long</code>, and can be written as:</p>
+<div class="highlight"><pre><span></span><code><span class="kt">long</span> <span class="n">x</span><span class="p">;</span>
+<span class="kt">long</span> <span class="o">*</span><span class="n">ptr</span><span class="p">;</span>
+<span class="kt">long</span> <span class="o">**</span><span class="n">ptrptr</span><span class="p">;</span>
+<span class="n">ptr</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">x</span><span class="p">;</span>
+<span class="n">ptrptr</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">ptr</span><span class="p">;</span>
+</code></pre></div>
+
+<p>This deference can go on since <code>ptrptr</code> is also a variable and have been allocated in some memory location on the stack.  We rarely need to dereference more than twice in practice, but if the situation arises, such multiple layers of dereferencing is possible.</p>
+<h2 id="the-null-pointer">The <code>NULL</code> Pointer</h2>
+<p><code>NULL</code> is a special value that is used to indicate that a pointer is pointing to nothing.  In C, <code>NULL</code> is actually 0 (i.e., pointing to memory location 0).</p>
+<p>We use <code>NULL</code> to indicate that the pointer is invalid, typically to mean that we have not initialized the pointer or to flag an error condition.</p>
+<div class="admonition note">
+<p class="admonition-title">Billion Dollar Mistakes</p>
+<p>Sir Tony Hoare (the same one whom we met when we talked about <a href="10-assert.html">Assertion</a>) also invented the null pointer.  He called it his billion-dollar mistake.  Quoting from him: "I couldn't resist the temptation to put in a null reference, simply because it was so easy to implement. This has led to innumerable errors, vulnerabilities, and system crashes, which have probably caused a billion dollars of pain and damage in the last forty years."  As you start to use pointers in CS1010, you will see why it is a pain.</p>
+</div>
+<h2 id="problem-set-14">Problem Set 14</h2>
+<h3 id="problem-141">Problem 14.1</h3>
+<p>Sketch the content of the memory while tracing through the following code.  What would be printed?</p>
+<div class="highlight"><pre><span></span><code><span class="kt">long</span> <span class="o">*</span><span class="n">ptr1</span><span class="p">;</span>
+<span class="kt">long</span> <span class="o">*</span><span class="n">ptr2</span><span class="p">;</span>
+<span class="kt">long</span> <span class="n">x</span><span class="p">;</span>
+<span class="kt">long</span> <span class="n">y</span><span class="p">;</span>
+
+<span class="n">ptr1</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">x</span><span class="p">;</span>
+<span class="n">ptr2</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">y</span><span class="p">;</span>
+
+<span class="o">*</span><span class="n">ptr1</span> <span class="o">=</span> <span class="mi">123</span><span class="p">;</span>
+<span class="o">*</span><span class="n">ptr2</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+
+<span class="n">cs1010_println_long</span><span class="p">(</span><span class="n">x</span><span class="p">);</span>
+<span class="n">cs1010_println_long</span><span class="p">(</span><span class="n">y</span><span class="p">);</span>
+<span class="n">cs1010_println_long</span><span class="p">(</span><span class="o">*</span><span class="n">ptr1</span><span class="p">);</span>
+<span class="n">cs1010_println_long</span><span class="p">(</span><span class="o">*</span><span class="n">ptr2</span><span class="p">);</span>
+
+<span class="c1">// ptr1 = ptr1; // &lt;-- typo in the first version of this question 😅</span>
+<span class="n">ptr1</span> <span class="o">=</span> <span class="n">ptr2</span><span class="p">;</span>
+<span class="o">*</span><span class="n">ptr1</span> <span class="o">=</span> <span class="mi">1946</span><span class="p">;</span>
+
+<span class="n">cs1010_println_long</span><span class="p">(</span><span class="n">x</span><span class="p">);</span>
+<span class="n">cs1010_println_long</span><span class="p">(</span><span class="n">y</span><span class="p">);</span>
+<span class="n">cs1010_println_long</span><span class="p">(</span><span class="o">*</span><span class="n">ptr1</span><span class="p">);</span>
+<span class="n">cs1010_println_long</span><span class="p">(</span><span class="o">*</span><span class="n">ptr2</span><span class="p">);</span>
+
+<span class="n">y</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+
+<span class="n">cs1010_println_long</span><span class="p">(</span><span class="n">x</span><span class="p">);</span>
+<span class="n">cs1010_println_long</span><span class="p">(</span><span class="n">y</span><span class="p">);</span>
+<span class="n">cs1010_println_long</span><span class="p">(</span><span class="o">*</span><span class="n">ptr1</span><span class="p">);</span>
+<span class="n">cs1010_println_long</span><span class="p">(</span><span class="o">*</span><span class="n">ptr2</span><span class="p">);</span>
+</code></pre></div>
+
+<h3 id="problem-142">Problem 14.2</h3>
+<p>What is wrong with both programs below?</p>
+<div class="highlight"><pre><span></span><code><span class="kt">double</span> <span class="o">*</span><span class="nf">addr_of</span><span class="p">(</span><span class="kt">double</span> <span class="n">x</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="k">return</span> <span class="o">&amp;</span><span class="n">x</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+  <span class="kt">double</span> <span class="n">c</span> <span class="o">=</span> <span class="mf">0.0</span><span class="p">;</span>
+  <span class="kt">double</span> <span class="o">*</span><span class="n">ptr</span><span class="p">;</span>
+
+  <span class="n">ptr</span> <span class="o">=</span> <span class="n">addr_of</span><span class="p">(</span><span class="n">c</span><span class="p">);</span>
+  <span class="o">*</span><span class="n">ptr</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="kt">double</span> <span class="o">*</span><span class="nf">triple_of</span><span class="p">(</span><span class="kt">double</span> <span class="n">x</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="kt">double</span> <span class="n">triple</span> <span class="o">=</span> <span class="mi">3</span> <span class="o">*</span> <span class="n">x</span><span class="p">;</span>
+  <span class="k">return</span> <span class="o">&amp;</span><span class="n">triple</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+  <span class="kt">double</span> <span class="o">*</span><span class="n">ptr</span><span class="p">;</span>
+
+  <span class="n">ptr</span> <span class="o">=</span> <span class="n">triple_of</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span>
+  <span class="n">cs1010_println_double</span><span class="p">(</span><span class="o">*</span><span class="n">ptr</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<div class="footnote">
 <hr />
-<h2 id="piazza-qa"><a href="https://piazza.com/class/jcaaskvbs754wh">Piazza Q&amp;A</a> <i class="fa fa-question-circle"></i></h2>
-<p>Piazza is the Q&amp;A site for students and instructors to ask questions and discuss among each other on all matters related to CS1010.</p>
-<hr />
-<h2 id="notes-and-lectures">Notes and Lectures <i class="fa fa-commenting"></i></h2>
-<h3 id="lecture-11_1">Lecture 11</h3>
-<ul>
-<li><a href="https://vimeo.com/299856036">Screencast</a> (complete)</li>
-</ul>
-<p>In this lecture, we discussed a few C specific topics: <code>struct</code>, <code>typedef</code>, <code>printf</code>, and <code>scanf</code>.  We covered <a href="28-struct.html">Unit 28</a> and <a href="29-stdio.html">Unit 29</a>.</p>
-<h3 id="lecture-10">Lecture 10</h3>
-<ul>
-<li><a href="https://www.comp.nus.edu.sg/~ooiwt/cs1010/1819s1/slides/cs1010-lec10.pdf">Slides</a> | <a href="https://vimeo.com/298957644">Screencast</a></li>
-</ul>
-<p>In this lecture, we discussed three classic recursive algorithms: the Tower of Hanoi (<a href="25-tower.html">Unit 25</a>), generating permutations (<a href="26-permutation.html">Unit 26</a>) and the <span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span>-Queens Problem (<a href="27-queens.html">Unit 27</a>).</p>
-<h3 id="lecture-9">Lecture 9</h3>
-<ul>
-<li><a href="https://vimeo.com/296337185">Screencast</a></li>
-</ul>
-<p>In this lecture, we will discuss three classic algorithms: binary search (in <a href="23-search.html">Unit 23</a>) bubble sort, and insertion sort (both in <a href="24-sort.html">Unit 24: Sorting</a>).  Note: There are no slides.</p>
-<h3 id="lecture-8">Lecture 8</h3>
-<ul>
-<li><a href="https://www.comp.nus.edu.sg/~ooiwt/cs1010/1819s1/slides/cs1010-lec8.pdf">Slides</a> | <a href="https://vimeo.com/296021391">Screencast</a></li>
-</ul>
-<p>In this lecture, we introduced C pre-processing, the <code>assert</code> macros, and the notion of efficiency in algorithms.</p>
-<p>Units covered are Units 20 - 22: <a href="20-macro.html">Unit 20: C Pre-processing</a>, <a href="21-assert.html">Unit 21: Assert</a>, <a href="22-efficiency.html">Unit 22: Efficiency</a>.</p>
-<h3 id="lecture-7">Lecture 7</h3>
-<ul>
-<li><a href="https://www.comp.nus.edu.sg/~ooiwt/cs1010/1819s1/slides/cs1010-lec7.pdf">Slides</a> | <a href="https://vimeo.com/294846320">Screencast</a></li>
-</ul>
-<p>In this lecture, we discussed how call-by-reference works in C, talked about memory allocation on the heap, and moved on the multi-dimensional arrays.</p>
-<p>Units covered are Units 17 - 19: <a href="17-call-by-reference.html">Unit 17: Call by Reference</a>, <a href="18-heap.html">Unit 18: Heap</a>, <a href="19-md-array.html">Unit 19: Multi-Dimensional Arrays</a>.</p>
-<h3 id="lecture-6">Lecture 6</h3>
-<ul>
-<li><a href="https://www.comp.nus.edu.sg/~ooiwt/cs1010/1819s1/slides/cs1010-lec6.pdf">Slides</a> | <a href="https://vimeo.com/292715268">Screencast</a></li>
-</ul>
-<p>In this lecture, we discussed how call stack works, giving more insights about how a C program is executed, particularly when we call a function and when a function returns.  We then discussed about pointers and arrays, ending with a brief introduction to strings as an array of <code>char</code>.</p>
-<p>Units covered are Units 13 - 16: <a href="13-call-stack.html">Unit 13: Call Stack</a>, <a href="14-pointers.html">Unit 14: Pointers</a>, <a href="15-array.html">Unit 15: Arrays</a> and <a href="16-string.html">Unit 16: Strings</a>.</p>
-<h3 id="lecture-5">Lecture 5</h3>
-<ul>
-<li><a href="https://www.comp.nus.edu.sg/~ooiwt/cs1010/1819s1/slides/cs1010-lec5.pdf">Slides</a> | <a href="https://vimeo.com/289833096">Screencast</a></li>
-</ul>
-<p>In this lecture, we talked about how to write loops, followed by using assertions to reason about the behavior and logic of our programs.</p>
-<p>Units covered are Units <a href="10-assert.html">10 Assertions</a>, <a href="11-loop.html">11 Loops</a>, and <a href="12-invariant.html">12 Reasoning About Loops</a>.</p>
-<h3 id="lecture-4">Lecture 4</h3>
-<ul>
-<li><a href="https://www.comp.nus.edu.sg/~ooiwt/cs1010/1819s1/slides/cs1010-lec4.pdf">Slides</a> | <a href="https://vimeo.com/288496827">Screencast</a> | <a href="kahoot01.html">Kahoot Quiz</a></li>
-</ul>
-<p>In this lecture, we learned how to write programs that involve branching execution paths, using <code>if</code>-<code>else</code> statements and logical expressions.  <a href="08-if-else.html">Unit 8 If-Else</a>, <a href="09-logical-exp.html">Unit 9 Logical Expression</a> were covered.</p>
-<h3 id="lecture-3">Lecture 3</h3>
-<ul>
-<li><a href="https://www.comp.nus.edu.sg/~ooiwt/cs1010/1819s1/slides/cs1010-lec3.pdf">Slides</a> | <a href="https://vimeo.com/287220672">Screencast</a></li>
-</ul>
-<p>We covered <a href="05-first-c.html">Unit 5: First C Program</a>, <a href="06-cs1010-io.html">Unit 6: CS1010 I/O Library</a> and <a href="07-arithmetic-ops.html">Unit 7: Arithmetic Operations</a>.</p>
-<p>In this lecture, we got started with writing simple C programs that read inputs, perform some calculations, and display the result.</p>
-<h3 id="lecture-2">Lecture 2</h3>
-<ul>
-<li><a href="https://www.comp.nus.edu.sg/~ooiwt/cs1010/1819s1/slides/cs1010-lec2.pdf">Slides</a> | <a href="https://vimeo.com/286525343">Screencast</a></li>
-</ul>
-<p>We covered <a href="03-func.html">Unit 3: functions</a> and <a href="04-type.html">Unit 4: types</a>.</p>
-<p>In this lecture, we learned the concepts of functions, with which we can build up a more complex algorithm from smaller building blocks, such as finding the maximum.  We also learned about the concept of types.</p>
-<h3 id="lecture-1">Lecture 1</h3>
-<ul>
-<li><a href="https://www.comp.nus.edu.sg/~ooiwt/cs1010/1819s1/slides/cs1010-lec1.pdf">Slides</a> | <a href="https://vimeo.com/285437711">Screencast</a> (password posted on Piazza)</li>
-</ul>
-<p>After some admin matters, we introduced what is a program, what is meant by programming, and what is computational problem solving.</p>
-<p>We covered <a href="01-program.html">Unit 1: What is a Program?</a> and <a href="02-algo.html">Unit 2: Computational Problems and Algorithms</a> in the first lecture.</p>
-<hr />
-<h2 id="programming-exercises">Programming Exercises</h2>
-<p>Exercises are ungraded programming questions for practicing on your own.</p>
-<h3 id="exercise-5-square-escape-magicsquare"><a href="ex05.html">Exercise 5: Square, Escape, MagicSquare</a></h3>
-<p>Released 31 October 2018</p>
-<h3 id="exercise-4-id-grade-index-max"><a href="ex04.html">Exercise 4: ID, Grade, Index, Max</a></h3>
-<p>Released 20 September 2018</p>
-<h3 id="exercise-3-binary-rectangle-fibonacci-prime"><a href="ex03.html">Exercise 3: Binary, Rectangle, Fibonacci, Prime</a></h3>
-<p>Released 13 September 2018</p>
-<h3 id="exercise-2-leap-suffix-days"><a href="ex02.html">Exercise 2: Leap, Suffix, Days</a></h3>
-<p>Released 6 September 2018</p>
-<h3 id="exercise-1-freezer"><a href="ex01.html">Exercise 1: Freezer</a></h3>
-<p>Released 3 September 2018</p>
-<hr />
-<h2 id="programming-assignments">Programming Assignments</h2>
-<h3 id="assignment-9-digits"><a href="as09.html">Assignment 9: Digits</a></h3>
-<p>Released 9 November 2018. Due 16 November 2018, 23:59pm</p>
-<h3 id="assignment-8-maze-fill"><a href="as08.html">Assignment 8: Maze, Fill</a></h3>
-<p>Released 2 November 2018. Due 9 November 2018, 23:59pm</p>
-<h3 id="assignment-7-peak-scripts-inversion"><a href="as07.html">Assignment 7: Peak, Scripts, Inversion</a></h3>
-<p>Released 26 October 2018. Due 2 November 2018, 23:59pm.</p>
-<h3 id="assignment-6-permutation-1-2-3"><a href="as06.html">Assignment 6: Permutation 1 2 3</a></h3>
-<p>Released 19 October 2018. Due 26 October 2018, 23:59pm.</p>
-<h3 id="assignment-5-social-life"><a href="as05.html">Assignment 5: Social, Life</a></h3>
-<p>Released 12 October 2018. Due 19 October 2018, 6pm.</p>
-<h3 id="assignment-4-selectionsort-add-mastermind"><a href="as04.html">Assignment 4: SelectionSort, Add, Mastermind</a></h3>
-<p>Released 5 October 2018. Due 12 October 2018, 6pm.</p>
-<h3 id="assignment-3-kendall-histogram-countingsort"><a href="as03.html">Assignment 3: Kendall, Histogram, CountingSort</a></h3>
-<p>Released 21 September 2018, Due 5 October 2018, 6pm.</p>
-<h3 id="assignment-2-collatz-weekday-circle-pattern"><a href="as02.html">Assignment 2: Collatz, Weekday, Circle, Pattern</a></h3>
-<p>Released 14 September 2018, Due 21 September 2018, 6pm.</p>
-<h3 id="assignment-1-invest-box-digits-and-taxi"><a href="as01.html">Assignment 1: Invest, Box, Digits, and Taxi</a></h3>
-<p>Released 7 September 2018, Due 14 September 2018, 6pm.</p>
+<ol>
+<li id="fn:2">
+<p>I leave it to the later OS classes CG2271 / CS2106 to explain the term "segmentation" and "fault".  Interested students can always google and <a href="https://en.wikipedia.org/wiki/Segmentation_fault">read on Wikipedia</a>.&#160;<a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
                 
               
               
@@ -2054,14 +1721,28 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
+          <a href="13-call-stack.html" title="13. Call Stack" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                13. Call Stack
+              </div>
+            </div>
+          </a>
         
-          <a href="midterm.html" title="Midterm" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+        
+          <a href="15-array.html" title="15. Arrays" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Midterm
+                15. Arrays
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">

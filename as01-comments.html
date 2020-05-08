@@ -1,0 +1,1914 @@
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <link rel="canonical" href="https://www.comp.nus.edu.sg/~ooiwt/cs1010/1819s1/as01-comments.html">
+      
+      
+      <link rel="shortcut icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1, mkdocs-material-5.1.3">
+    
+    
+      
+        <title>1. Comments and Answer Keys - CS1010 Programming Methodology</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.62d34fff.min.css">
+      
+      
+    
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Gentium+Book+Basic">
+    
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700">
+    
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#assignment-1-comments" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="https://www.comp.nus.edu.sg/~ooiwt/cs1010/1819s1" title="CS1010 Programming Methodology" class="md-header-nav__button md-logo" aria-label="CS1010 Programming Methodology">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12,8A3,3 0 0,0 15,5A3,3 0 0,0 12,2A3,3 0 0,0 9,5A3,3 0 0,0 12,8M12,11.54C9.64,9.35 6.5,8 3,8V19C6.5,19 9.64,20.35 12,22.54C14.36,20.35 17.5,19 21,19V8C17.5,8 14.36,9.35 12,11.54Z" /></svg>
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z" /></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            CS1010 Programming Methodology
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              1. Comments and Answer Keys
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z" /></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z" /></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z" /></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+        
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="https://www.comp.nus.edu.sg/~ooiwt/cs1010/1819s1" title="CS1010 Programming Methodology" class="md-nav__button md-logo" aria-label="CS1010 Programming Methodology">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12,8A3,3 0 0,0 15,5A3,3 0 0,0 12,2A3,3 0 0,0 9,5A3,3 0 0,0 12,8M12,11.54C9.64,9.35 6.5,8 3,8V19C6.5,19 9.64,20.35 12,22.54C14.36,20.35 17.5,19 21,19V8C17.5,8 14.36,9.35 12,11.54Z" /></svg>
+
+    </a>
+    CS1010 Programming Methodology
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="index.html" title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="midterm.html" title="Midterm" class="md-nav__link">
+      Midterm
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      Practical Exams
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Practical Exams" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        Practical Exams
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="pe1.html" title="Info About PE1" class="md-nav__link">
+      Info About PE1
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="pe1-comments.html" title="PE1 Comments and Answers" class="md-nav__link">
+      PE1 Comments and Answers
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="pe2.html" title="Info About PE2" class="md-nav__link">
+      Info About PE2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="pe2-comments.html" title="PE2 Comments and Answers" class="md-nav__link">
+      PE2 Comments and Answers
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      General
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="General" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        General
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="about.html" title="About CS1010" class="md-nav__link">
+      About CS1010
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="outcomes.html" title="Learning Outcomes" class="md-nav__link">
+      Learning Outcomes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="schedule.html" title="Schedule" class="md-nav__link">
+      Schedule
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="accounts.html" title="Accounts" class="md-nav__link">
+      Accounts
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="policies.html" title="Policies" class="md-nav__link">
+      Policies
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      Notes
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Notes" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        Notes
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="01-program.html" title="1. What is a Program?" class="md-nav__link">
+      1. What is a Program?
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="02-algo.html" title="2. Computational Problem & Algorithms" class="md-nav__link">
+      2. Computational Problem &amp; Algorithms
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="03-func.html" title="3. Functions" class="md-nav__link">
+      3. Functions
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="04-type.html" title="4. Types" class="md-nav__link">
+      4. Types
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="05-first-c.html" title="5. First C Program" class="md-nav__link">
+      5. First C Program
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="06-cs1010-io.html" title="6. CS1010 I/O Library" class="md-nav__link">
+      6. CS1010 I/O Library
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="07-arithmetic-ops.html" title="7. Arithmetic Operations" class="md-nav__link">
+      7. Arithmetic Operations
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="08-if-else.html" title="8. If Else" class="md-nav__link">
+      8. If Else
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="09-logical-exp.html" title="9. Logical Expression" class="md-nav__link">
+      9. Logical Expression
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="10-assert.html" title="10. Assertion" class="md-nav__link">
+      10. Assertion
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="11-loop.html" title="11. Loops" class="md-nav__link">
+      11. Loops
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="12-invariant.html" title="12. Reasoning About Loops" class="md-nav__link">
+      12. Reasoning About Loops
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="13-call-stack.html" title="13. Call Stack" class="md-nav__link">
+      13. Call Stack
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="14-pointers.html" title="14. Pointers" class="md-nav__link">
+      14. Pointers
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="15-array.html" title="15. Arrays" class="md-nav__link">
+      15. Arrays
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="16-string.html" title="16. Strings" class="md-nav__link">
+      16. Strings
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="17-call-by-reference.html" title="17. Call by Reference" class="md-nav__link">
+      17. Call by Reference
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="18-heap.html" title="18. Heap" class="md-nav__link">
+      18. Heap
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="19-md-array.html" title="19. Multidimensional Array" class="md-nav__link">
+      19. Multidimensional Array
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="20-macro.html" title="20. C Pre-processing" class="md-nav__link">
+      20. C Pre-processing
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="21-assert.html" title="21. Assert" class="md-nav__link">
+      21. Assert
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="22-efficiency.html" title="22. Efficiency" class="md-nav__link">
+      22. Efficiency
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="23-search.html" title="23. Binary Search" class="md-nav__link">
+      23. Binary Search
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="24-sort.html" title="24. Sorting" class="md-nav__link">
+      24. Sorting
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="25-tower.html" title="25. Tower of Hanoi" class="md-nav__link">
+      25. Tower of Hanoi
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="26-permutation.html" title="26. Permutation" class="md-nav__link">
+      26. Permutation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="27-queens.html" title="27. N Queens" class="md-nav__link">
+      27. N Queens
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="28-struct.html" title="28. Structure" class="md-nav__link">
+      28. Structure
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="29-stdio.html" title="29. stdio" class="md-nav__link">
+      29. stdio
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      Exercises
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Exercises" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        Exercises
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="ex01.html" title="1. Freezer" class="md-nav__link">
+      1. Freezer
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="ex02.html" title="2. Leap, Suffix, Days" class="md-nav__link">
+      2. Leap, Suffix, Days
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="ex03.html" title="3. Binary, Rectangle, Fibonacci, Prime" class="md-nav__link">
+      3. Binary, Rectangle, Fibonacci, Prime
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="ex04.html" title="4. ID, Grade, Index, Max" class="md-nav__link">
+      4. ID, Grade, Index, Max
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="ex05.html" title="5. Square, Escape, Magic" class="md-nav__link">
+      5. Square, Escape, Magic
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7" checked>
+    
+    <label class="md-nav__link" for="nav-7">
+      Assignments
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Assignments" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        Assignments
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="assignment.html" title="General Guide" class="md-nav__link">
+      General Guide
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="as01.html" title="1. Invest, Box, Digits, and Taxi" class="md-nav__link">
+      1. Invest, Box, Digits, and Taxi
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        1. Comments and Answer Keys
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3,9H17V7H3V9M3,13H17V11H3V13M3,17H17V15H3V17M19,17H21V15H19V17M19,7V9H21V7H19M19,13H21V11H19V13Z" /></svg>
+        </span>
+      </label>
+    
+    <a href="as01-comments.html" title="1. Comments and Answer Keys" class="md-nav__link md-nav__link--active">
+      1. Comments and Answer Keys
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#notes-on-marking-schemes" class="md-nav__link">
+    Notes on Marking Schemes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#general-mistakes" class="md-nav__link">
+    General Mistakes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#logical-mistakes-bugs" class="md-nav__link">
+    Logical Mistakes (bugs)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#answer-keys" class="md-nav__link">
+    Answer Keys
+  </a>
+  
+    <nav class="md-nav" aria-label="Answer Keys">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#invest" class="md-nav__link">
+    Invest
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#box" class="md-nav__link">
+    Box
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#digits" class="md-nav__link">
+    Digits
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#taxi" class="md-nav__link">
+    Taxi
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="as02.html" title="2. Collatz, Weekday, Circle, Pattern" class="md-nav__link">
+      2. Collatz, Weekday, Circle, Pattern
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="as02-comments.html" title="2. Comments and Answer Keys" class="md-nav__link">
+      2. Comments and Answer Keys
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="as03.html" title="3. Kendall, Histogram, CountingSort" class="md-nav__link">
+      3. Kendall, Histogram, CountingSort
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="as03-comments.html" title="3. Comments and Answer Keys" class="md-nav__link">
+      3. Comments and Answer Keys
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="as04.html" title="4. SelectionSort, Add, Mastermind" class="md-nav__link">
+      4. SelectionSort, Add, Mastermind
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="as04-comments.html" title="4. Comments and Answer Keys" class="md-nav__link">
+      4. Comments and Answer Keys
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="as05.html" title="5. Social, Life" class="md-nav__link">
+      5. Social, Life
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="as05-comments.html" title="5. Comments and Answer Keys" class="md-nav__link">
+      5. Comments and Answer Keys
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="as06.html" title="6. Permutation 1 2 3" class="md-nav__link">
+      6. Permutation 1 2 3
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="as06-comments.html" title="6. Comments and Answer Keys" class="md-nav__link">
+      6. Comments and Answer Keys
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="as07.html" title="7. Peak, Scripts, Inversion" class="md-nav__link">
+      7. Peak, Scripts, Inversion
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="as07-comments.html" title="7. Comments and Answer Keys" class="md-nav__link">
+      7. Comments and Answer Keys
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="as08.html" title="8. Maze, Fill" class="md-nav__link">
+      8. Maze, Fill
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="as08-comments.html" title="8. Comments and Answer Keys" class="md-nav__link">
+      8. Comments and Answer Keys
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="as09.html" title="9. Digits" class="md-nav__link">
+      9. Digits
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="as09-comments.html" title="9. Comments and Answer Keys" class="md-nav__link">
+      9. Comments and Answer Keys
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="quiz.html" title="Quizzes" class="md-nav__link">
+      Quizzes
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9">
+    
+    <label class="md-nav__link" for="nav-9">
+      Kahoot!
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Kahoot!" data-md-level="1">
+      <label class="md-nav__title" for="nav-9">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        Kahoot!
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="kahoot01.html" title="Flow Charts" class="md-nav__link">
+      Flow Charts
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="c-in-cs1010.html" title="C in CS1010" class="md-nav__link">
+      C in CS1010
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="style.html" title="Style Guide" class="md-nav__link">
+      Style Guide
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="documentation.html" title="Documentation Guide" class="md-nav__link">
+      Documentation Guide
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="readings.html" title="Readings" class="md-nav__link">
+      Readings
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-14" type="checkbox" id="nav-14">
+    
+    <label class="md-nav__link" for="nav-14">
+      Software/Tools
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Software/Tools" data-md-level="1">
+      <label class="md-nav__title" for="nav-14">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        Software/Tools
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="environments.html" title="Programming Environments" class="md-nav__link">
+      Programming Environments
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="unix.html" title="UNIX" class="md-nav__link">
+      UNIX
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="clang.html" title="CLang" class="md-nav__link">
+      CLang
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="vim.html" title="Vim" class="md-nav__link">
+      Vim
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="lldb.html" title="LLDB" class="md-nav__link">
+      LLDB
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="library.html" title="CS1010 I/O" class="md-nav__link">
+      CS1010 I/O
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#notes-on-marking-schemes" class="md-nav__link">
+    Notes on Marking Schemes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#general-mistakes" class="md-nav__link">
+    General Mistakes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#logical-mistakes-bugs" class="md-nav__link">
+    Logical Mistakes (bugs)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#answer-keys" class="md-nav__link">
+    Answer Keys
+  </a>
+  
+    <nav class="md-nav" aria-label="Answer Keys">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#invest" class="md-nav__link">
+    Invest
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#box" class="md-nav__link">
+    Box
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#digits" class="md-nav__link">
+    Digits
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#taxi" class="md-nav__link">
+    Taxi
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  
+                
+                
+                <h1 id="assignment-1-comments">Assignment 1: Comments</h1>
+<h2 id="notes-on-marking-schemes">Notes on Marking Schemes</h2>
+<ul>
+<li>We apply the penalty to each program independently, i.e., the same mistake repeated in the different program get penalized multiple times.  </li>
+<li>
+<p>You will receive 0 marks if your program cannot be compiled or is plagiarised from another.</p>
+</li>
+<li>
+<p>Code that fails all test cases and showing that student does not understand the main concept tested in each question (writing arithmetic expressions in <code>invest</code>, recursion in <code>digits</code>, use of functions in <code>box</code>, and logical expressions and conditionals in <code>taxi</code>), receives 0 marks straight away.</p>
+</li>
+<li>
+<p>For the rest, we start with full marks and start deducting marks for each error.</p>
+</li>
+<li>
+<p>While the teaching team tries to ensure fair and consistent grading of assignments across all groups, each TA can, at his/her own discretion, and with the approval of Wei Tsang, adjust the grading criteria to align with the messages that they sent to the students in their tutorial group.</p>
+</li>
+<li>
+<p>The following list includes some of the common mistakes we encountered.  </p>
+</li>
+</ul>
+<h2 id="general-mistakes">General Mistakes</h2>
+<p>This penalty applies once per program (not per occurrence).</p>
+<ul>
+<li>-1 for missing type in function declaration or definition</li>
+<li>-1 for using <code>int</code>/<code>long</code> instead of <code>bool</code> for boolean functions or variables</li>
+<li>-1 for using <code>double</code> instead of <code>long</code> when it is not necessary (does not involve integer division).  For instance, using <code>double</code> for <code>invest.c</code> during calculation is ok, using <code>double</code> for calculating the area of the box is not.</li>
+<li>-1 for using of <code>int</code> instead of <code>long</code>.  Using <code>int</code> for this assignment is ok only for <code>day</code>, <code>hour</code>, and <code>minute</code>, where there is an implicit constraint on the range of the value.</li>
+<li>-1 for failing to use parenthesis (e.g., <code>a &amp;&amp; b || c</code>)</li>
+<li>-1 for unnecessary/unused parameters passed into a function</li>
+<li>-1 for unnecessary/unused variables declared</li>
+<li>-1 for not including @author/@group</li>
+<li>-1 for global variables</li>
+<li>-1 for unreachable code / return</li>
+<li>-1 for using <code>==</code> to compare real numbers</li>
+</ul>
+<h2 id="logical-mistakes-bugs">Logical Mistakes (bugs)</h2>
+<p>In general, -1 for each bug.</p>
+<ul>
+<li>-1 for each incorrect logical expression</li>
+<li>-1 for each incorrect arithmetic expression</li>
+<li>-1 for each incorrect use of <code>if</code>-<code>else</code></li>
+<li>-1 for each uninitialized variables causing incorrect output.</li>
+<li>-1 if program prints extra text / newline</li>
+<li>-1 if the program returns non-zero from <code>main</code> even if the program exits successfully.</li>
+</ul>
+<h2 id="answer-keys">Answer Keys</h2>
+<h3 id="invest">Invest</h3>
+<p>This problem assesses if students know how to use arithmetic operations, parenthesis, and math library properly.  Most common mistakes include using <code>float</code> and <code>int</code> as data type, which would lead to loss of precision and overflow.  Suppose someone has $2.6 billion in his bank account, using <code>int</code> would cause an overflow.</p>
+<div class="highlight"><pre><span></span><code><span class="cm">/**</span>
+<span class="cm"> * CS1010 Semester 1 AY18/19</span>
+<span class="cm"> * Assignment 1: Invest</span>
+<span class="cm"> *</span>
+<span class="cm"> * Read in three positive integer corresponding to the principal, the</span>
+<span class="cm"> * interest rate, and the number of years.  Print the resulting amount</span>
+<span class="cm"> * after the given num of years to the standard output.</span>
+<span class="cm"> *</span>
+<span class="cm"> * @file: invest.c</span>
+<span class="cm"> * @author: XXX (Group YYY)</span>
+<span class="cm"> */</span>
+
+<span class="cp">#include</span> <span class="cpf">&quot;cs1010.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;math.h&gt;</span><span class="cp"></span>
+
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+  <span class="kt">long</span> <span class="n">principal</span> <span class="o">=</span> <span class="n">cs1010_read_long</span><span class="p">();</span>
+  <span class="kt">long</span> <span class="n">rate</span> <span class="o">=</span> <span class="n">cs1010_read_long</span><span class="p">();</span>
+  <span class="kt">long</span> <span class="n">num_of_years</span> <span class="o">=</span> <span class="n">cs1010_read_long</span><span class="p">();</span>
+
+  <span class="kt">double</span> <span class="n">r</span> <span class="o">=</span> <span class="n">rate</span><span class="o">/</span><span class="mf">100.0</span><span class="p">;</span>
+  <span class="kt">double</span> <span class="n">result</span> <span class="o">=</span> <span class="n">principal</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">pow</span><span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="n">num_of_years</span> <span class="o">+</span> <span class="mi">1</span><span class="p">))</span><span class="o">/</span><span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">r</span><span class="p">);</span>
+
+  <span class="n">cs1010_println_double</span><span class="p">(</span><span class="n">result</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<h3 id="box">Box</h3>
+<p>This problem tests if students know how to write and reuse functions.  </p>
+<p>Some students wrote different versions of <code>area_of_rectangle</code>:
+<div class="highlight"><pre><span></span><code><span class="kt">long</span> <span class="nf">area_of_rectangle1</span><span class="p">(</span><span class="kt">long</span> <span class="n">width</span><span class="p">,</span> <span class="kt">long</span> <span class="n">height</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="k">return</span> <span class="n">width</span> <span class="o">*</span> <span class="n">height</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">long</span> <span class="nf">area_of_rectangle2</span><span class="p">(</span><span class="kt">long</span> <span class="n">width</span><span class="p">,</span> <span class="kt">long</span> <span class="n">base</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="k">return</span> <span class="n">width</span> <span class="o">*</span> <span class="n">base</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">long</span> <span class="nf">area_of_rectangle3</span><span class="p">(</span><span class="kt">long</span> <span class="n">base</span><span class="p">,</span> <span class="kt">long</span> <span class="n">height</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="k">return</span> <span class="n">base</span> <span class="o">*</span> <span class="n">height</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<p>demonstrating that they do not understand how functions can be reused by passing in different parameters.</p>
+<p>This problem also demonstrates how functions written for another problem (calculating the hypotenuse of a triangle in class) can be used to solve a different problem (diagonal of the box).  The <code>hypotenuse_of</code> function written in class, however, takes in <code>long</code> instead of <code>double</code>, so we have to change that.  Some of you also change the <code>hypotenuse_of</code> method to take in three parameters so that it calculates the diagonal directly.  This solution is fine as well.</p>
+<div class="highlight"><pre><span></span><code><span class="cm">/**</span>
+<span class="cm"> * CS1010 Semester 1 AY18/19</span>
+<span class="cm"> * Assignment 1: Box</span>
+<span class="cm"> *</span>
+<span class="cm"> * Read in three positive integer corresponding to the width,</span>
+<span class="cm"> * height, and length of a box from the standard input, and</span>
+<span class="cm"> * print the total surface area and the length of the diagonal</span>
+<span class="cm"> * to the standard output.</span>
+<span class="cm"> *</span>
+<span class="cm"> * @file: box.c</span>
+<span class="cm"> * @author: XXX (Group YYY)</span>
+<span class="cm"> */</span>
+
+<span class="cp">#include</span> <span class="cpf">&quot;cs1010.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;math.h&gt;</span><span class="cp"></span>
+
+<span class="cm">/**</span>
+<span class="cm"> * Calculate the hypotenuse of a triangle.</span>
+<span class="cm"> *</span>
+<span class="cm"> * @param[in] base The base of the triangle.</span>
+<span class="cm"> * @param[in] height The height of the triangle.</span>
+<span class="cm"> * @return The hypotenuse of the triangle.</span>
+<span class="cm"> */</span>
+<span class="kt">double</span> <span class="nf">hypotenuse_of</span><span class="p">(</span><span class="kt">double</span> <span class="n">base</span><span class="p">,</span> <span class="kt">double</span> <span class="n">height</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="k">return</span> <span class="n">sqrt</span><span class="p">(</span><span class="n">base</span><span class="o">*</span><span class="n">base</span> <span class="o">+</span> <span class="n">height</span><span class="o">*</span><span class="n">height</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="cm">/**</span>
+<span class="cm"> * Calculate the area of a rectangle.</span>
+<span class="cm"> *</span>
+<span class="cm"> * @param[in] width The width of the rectangle.</span>
+<span class="cm"> * @param[in] height The height of the rectangle.</span>
+<span class="cm"> * @return The surface area of the rectangle.</span>
+<span class="cm"> */</span>
+<span class="kt">long</span> <span class="nf">area_of_rectangle</span><span class="p">(</span><span class="kt">long</span> <span class="n">width</span><span class="p">,</span> <span class="kt">long</span> <span class="n">height</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="k">return</span> <span class="n">width</span> <span class="o">*</span> <span class="n">height</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+  <span class="kt">long</span> <span class="n">width</span> <span class="o">=</span> <span class="n">cs1010_read_long</span><span class="p">();</span>
+  <span class="kt">long</span> <span class="n">height</span> <span class="o">=</span> <span class="n">cs1010_read_long</span><span class="p">();</span>
+  <span class="kt">long</span> <span class="n">length</span> <span class="o">=</span> <span class="n">cs1010_read_long</span><span class="p">();</span>
+
+  <span class="kt">long</span> <span class="n">surface_area</span> <span class="o">=</span> <span class="mi">2</span><span class="o">*</span><span class="n">area_of_rectangle</span><span class="p">(</span><span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">)</span> <span class="o">+</span>
+    <span class="mi">2</span><span class="o">*</span><span class="n">area_of_rectangle</span><span class="p">(</span><span class="n">width</span><span class="p">,</span> <span class="n">length</span><span class="p">)</span> <span class="o">+</span>
+    <span class="mi">2</span><span class="o">*</span><span class="n">area_of_rectangle</span><span class="p">(</span><span class="n">length</span><span class="p">,</span> <span class="n">height</span><span class="p">);</span>
+  <span class="n">cs1010_print_long</span><span class="p">(</span><span class="n">surface_area</span><span class="p">);</span>
+
+  <span class="n">cs1010_print_string</span><span class="p">(</span><span class="s">&quot; &quot;</span><span class="p">);</span>
+
+  <span class="kt">double</span> <span class="n">hypotenuse</span> <span class="o">=</span> <span class="n">hypotenuse_of</span><span class="p">(</span><span class="n">hypotenuse_of</span><span class="p">(</span><span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">),</span> <span class="n">length</span><span class="p">);</span>
+  <span class="n">cs1010_println_double</span><span class="p">(</span><span class="n">hypotenuse</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<h3 id="digits">Digits</h3>
+<p>Most students who solve this correctly (without a loop and without segmentation fault) are able to get the idea of how recursion can be used here.  The most common error we see if a mismatch of types, where students use <code>int</code> leading to failure when we test with a large integer beyond the range of <code>int</code>.  </p>
+<div class="highlight"><pre><span></span><code><span class="cm">/**</span>
+<span class="cm"> * CS1010 Semester 1 AY18/19</span>
+<span class="cm"> * Assignment 1: Digits</span>
+<span class="cm"> *</span>
+<span class="cm"> * Read in a positive integer from the standard input and print</span>
+<span class="cm"> * the sum of all digits in the integer to the standard output.</span>
+<span class="cm"> *</span>
+<span class="cm"> * @file: digits.c</span>
+<span class="cm"> * @author: XXX (Group YYY)</span>
+<span class="cm"> */</span>
+
+<span class="cp">#include</span> <span class="cpf">&quot;cs1010.h&quot;</span><span class="cp"></span>
+
+<span class="cm">/**</span>
+<span class="cm"> * Sum the digits in input.</span>
+<span class="cm"> *</span>
+<span class="cm"> * @param[in] input The integer whose digits we are summing.</span>
+<span class="cm"> * @return The sum of digits in the parameter input.</span>
+<span class="cm"> */</span>
+<span class="kt">long</span> <span class="nf">sum_of_digits</span><span class="p">(</span><span class="kt">long</span> <span class="n">input</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="k">if</span> <span class="p">(</span><span class="n">input</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="n">input</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="kt">long</span> <span class="n">last_digit</span> <span class="o">=</span> <span class="n">input</span> <span class="o">%</span> <span class="mi">10</span><span class="p">;</span>
+  <span class="kt">long</span> <span class="n">rest</span> <span class="o">=</span> <span class="n">input</span> <span class="o">/</span> <span class="mi">10</span><span class="p">;</span>
+  <span class="k">return</span> <span class="n">last_digit</span> <span class="o">+</span> <span class="n">sum_of_digits</span><span class="p">(</span><span class="n">rest</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+  <span class="kt">long</span> <span class="n">input</span> <span class="o">=</span> <span class="n">cs1010_read_long</span><span class="p">();</span>
+  <span class="n">cs1010_println_long</span><span class="p">(</span><span class="n">sum_of_digits</span><span class="p">(</span><span class="n">input</span><span class="p">));</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<h3 id="taxi">Taxi</h3>
+<p>This is a more complex problem.  We hope that students, when thinking about the solution of this problem, can appreciate the importance of breaking down the problem into simpler subproblems so that you can think, solve, and test the sub-solutions, independently, before combining them to solve the larger problem.  </p>
+<p>Another objective of this question is to get students to think about what parameters and variables are needed to solve a subproblem.  Students who think through this should realize that to calculate the metered fare only the distance is needed and to calculate the surcharge, only the day and time is needed.  Further, to determine evening peak and midnight peak, only the hour is needed (not minutes nor day).</p>
+<p>Some common mistakes include being careless in checking for the peak hour surcharge (bug in logical expressions).  </p>
+<p>Some students use <code>ceil</code> to calculate the metered fare, which is fine (simpler than the sample code below).  But a few students incorrectly use <code>round</code> instead.  </p>
+<div class="highlight"><pre><span></span><code><span class="cm">/**</span>
+<span class="cm"> * CS1010 Semester 1 AY18/19</span>
+<span class="cm"> * Assignment 1: Taxi</span>
+<span class="cm"> *</span>
+<span class="cm"> * Read in four positive integer corresponding to the day of the week,</span>
+<span class="cm"> * the hour and minute of boarding, and the distance traveled.  Print</span>
+<span class="cm"> * to the standard output, the fare of the taxi.</span>
+<span class="cm"> * height, and length of a box from the standard input, and</span>
+<span class="cm"> * print the total surface area and the length of the diagonal</span>
+<span class="cm"> * to the standard output.</span>
+<span class="cm"> *</span>
+<span class="cm"> * @file: taxi.c</span>
+<span class="cm"> * @author: XXX (Group YYY)</span>
+<span class="cm"> */</span>
+
+<span class="cp">#include</span> <span class="cpf">&quot;cs1010.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;stdbool.h&gt;</span><span class="cp"></span>
+
+<span class="cm">/**</span>
+<span class="cm"> * Check if a given day is a weekday.</span>
+<span class="cm"> *</span>
+<span class="cm"> * @param[in] day The day of the week (1 for Monday, 7 for Sunday).</span>
+<span class="cm"> * @return true if the day is a weekday, false otherwise.</span>
+<span class="cm"> */</span>
+<span class="kt">bool</span> <span class="nf">is_weekday</span><span class="p">(</span><span class="kt">long</span> <span class="n">day</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="k">return</span> <span class="p">(</span><span class="n">day</span> <span class="o">&gt;=</span> <span class="mi">1</span> <span class="o">&amp;&amp;</span> <span class="n">day</span> <span class="o">&lt;=</span> <span class="mi">5</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="cm">/**</span>
+<span class="cm"> * Check if a given time falls under morning peak hour (6am to 9:29am)</span>
+<span class="cm"> *</span>
+<span class="cm"> * @param[in] hour The given hour.</span>
+<span class="cm"> * @param[in] minute The given minute.</span>
+<span class="cm"> * @return true if the given time falls under morning peak hour.  </span>
+<span class="cm"> *         false otherwise.</span>
+<span class="cm"> */</span>
+<span class="kt">bool</span> <span class="nf">is_morning_peak</span><span class="p">(</span><span class="kt">long</span> <span class="n">hour</span><span class="p">,</span> <span class="kt">long</span> <span class="n">minute</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="k">return</span> <span class="p">(</span><span class="n">hour</span> <span class="o">&gt;=</span> <span class="mi">6</span> <span class="o">&amp;&amp;</span> <span class="n">hour</span> <span class="o">&lt;</span> <span class="mi">9</span><span class="p">)</span> <span class="o">||</span> <span class="p">(</span><span class="n">hour</span> <span class="o">==</span> <span class="mi">9</span> <span class="o">&amp;&amp;</span> <span class="n">minute</span> <span class="o">&lt;=</span> <span class="mi">29</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="cm">/**</span>
+<span class="cm"> * Check if a given time falls under evening peak hour (6pm to 11:59pm).</span>
+<span class="cm"> *</span>
+<span class="cm"> * @param[in] hour The given hour.</span>
+<span class="cm"> * @return true if the given time falls under morning peak hour.  </span>
+<span class="cm"> *         false otherwise.</span>
+<span class="cm"> */</span>
+<span class="kt">bool</span> <span class="nf">is_evening_peak</span><span class="p">(</span><span class="kt">long</span> <span class="n">hour</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="k">return</span> <span class="p">(</span><span class="n">hour</span> <span class="o">&gt;=</span> <span class="mi">18</span> <span class="o">&amp;&amp;</span> <span class="n">hour</span> <span class="o">&lt;=</span> <span class="mi">23</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="cm">/**</span>
+<span class="cm"> * Check if a given time falls under midnight peak hour (0:00 to 5:59am).</span>
+<span class="cm"> *</span>
+<span class="cm"> * @param[in] hour The given hour.</span>
+<span class="cm"> * @return true if the given time falls under midnight peak hour.  </span>
+<span class="cm"> *         false otherwise.</span>
+<span class="cm"> */</span>
+<span class="kt">bool</span> <span class="nf">is_midnight_peak</span><span class="p">(</span><span class="kt">long</span> <span class="n">hour</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="k">return</span> <span class="p">(</span><span class="n">hour</span> <span class="o">&gt;=</span> <span class="mi">0</span> <span class="o">&amp;&amp;</span> <span class="n">hour</span> <span class="o">&lt;</span> <span class="mi">6</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="cm">/**</span>
+<span class="cm"> * Check if surchange should be applied given day and time.</span>
+<span class="cm"> *</span>
+<span class="cm"> * @param[in] day Day of the taxi trip</span>
+<span class="cm"> * @param[in] hour Hour of boarding time.</span>
+<span class="cm"> * @param[in] minute Minute of boarding time</span>
+<span class="cm"> * @return The surchage applied (1.0 if no surcharge)).</span>
+<span class="cm"> */</span>
+<span class="kt">double</span> <span class="nf">surcharge</span><span class="p">(</span><span class="kt">long</span> <span class="n">day</span><span class="p">,</span> <span class="kt">long</span> <span class="n">hour</span><span class="p">,</span> <span class="kt">long</span> <span class="n">minute</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="k">if</span> <span class="p">(</span><span class="n">is_weekday</span><span class="p">(</span><span class="n">day</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="n">is_morning_peak</span><span class="p">(</span><span class="n">hour</span><span class="p">,</span> <span class="n">minute</span><span class="p">))</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="mf">1.25</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="k">if</span> <span class="p">(</span><span class="n">is_evening_peak</span><span class="p">(</span><span class="n">hour</span><span class="p">))</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="mf">1.25</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="k">if</span> <span class="p">(</span><span class="n">is_midnight_peak</span><span class="p">(</span><span class="n">hour</span><span class="p">))</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="mf">1.5</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="k">return</span> <span class="mf">1.0</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="cm">/**</span>
+<span class="cm"> * Calculate the metered fare for a taxi trip (before surcharge).</span>
+<span class="cm"> *</span>
+<span class="cm"> * @param[in] distance The distance travelled.</span>
+<span class="cm"> */</span>
+<span class="kt">double</span> <span class="nf">metered_fare</span><span class="p">(</span><span class="kt">long</span> <span class="n">distance</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="kt">double</span> <span class="n">fare</span> <span class="o">=</span> <span class="mf">3.40</span><span class="p">;</span>
+
+  <span class="n">distance</span> <span class="o">-=</span> <span class="mi">1000</span><span class="p">;</span>
+  <span class="k">if</span> <span class="p">(</span><span class="n">distance</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="n">fare</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="k">if</span> <span class="p">(</span><span class="n">distance</span> <span class="o">&lt;=</span> <span class="mi">9200</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">fare</span> <span class="o">+=</span> <span class="mf">0.22</span> <span class="o">*</span> <span class="p">(</span><span class="n">distance</span> <span class="o">/</span> <span class="mi">400</span><span class="p">);</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">distance</span> <span class="o">%</span> <span class="mi">400</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+      <span class="n">fare</span> <span class="o">+=</span> <span class="mf">0.22</span><span class="p">;</span>
+    <span class="p">}</span>
+  <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+    <span class="n">fare</span> <span class="o">+=</span> <span class="mf">0.22</span> <span class="o">*</span> <span class="p">(</span><span class="mi">9200</span> <span class="o">/</span> <span class="mi">400</span><span class="p">);</span>
+  <span class="p">}</span>
+
+  <span class="n">distance</span> <span class="o">-=</span> <span class="mi">9200</span><span class="p">;</span>
+  <span class="k">if</span> <span class="p">(</span><span class="n">distance</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="n">fare</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="n">fare</span> <span class="o">+=</span> <span class="mf">0.22</span> <span class="o">*</span> <span class="p">(</span><span class="n">distance</span> <span class="o">/</span> <span class="mi">350</span><span class="p">);</span>
+  <span class="k">if</span> <span class="p">(</span><span class="n">distance</span> <span class="o">%</span> <span class="mi">350</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">fare</span> <span class="o">+=</span> <span class="mf">0.22</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="k">return</span> <span class="n">fare</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="cm">/**</span>
+<span class="cm"> * Calculate the fare for a taxi trip (including surcharge).</span>
+<span class="cm"> *</span>
+<span class="cm"> * @param[in] day Day of the taxi trip</span>
+<span class="cm"> * @param[in] hour Hour of boarding time</span>
+<span class="cm"> * @param[in] minute Minute of boarding time</span>
+<span class="cm"> * @param[in] distance The distance travelled</span>
+<span class="cm"> */</span>
+<span class="kt">double</span> <span class="nf">fare</span><span class="p">(</span><span class="kt">long</span> <span class="n">day</span><span class="p">,</span> <span class="kt">long</span> <span class="n">hour</span><span class="p">,</span> <span class="kt">long</span> <span class="n">minute</span><span class="p">,</span> <span class="kt">long</span> <span class="n">distance</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="k">return</span> <span class="n">metered_fare</span><span class="p">(</span><span class="n">distance</span><span class="p">)</span> <span class="o">*</span> <span class="n">surcharge</span><span class="p">(</span><span class="n">day</span><span class="p">,</span> <span class="n">hour</span><span class="p">,</span> <span class="n">minute</span><span class="p">);</span>
+<span class="p">}</span>
+
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+  <span class="kt">long</span> <span class="n">day</span> <span class="o">=</span> <span class="n">cs1010_read_long</span><span class="p">();</span>
+  <span class="kt">long</span> <span class="n">start_hour</span> <span class="o">=</span> <span class="n">cs1010_read_long</span><span class="p">();</span>
+  <span class="kt">long</span> <span class="n">start_minute</span> <span class="o">=</span> <span class="n">cs1010_read_long</span><span class="p">();</span>
+  <span class="kt">long</span> <span class="n">distance</span> <span class="o">=</span> <span class="n">cs1010_read_long</span><span class="p">();</span>
+
+  <span class="n">cs1010_println_double</span><span class="p">(</span><span class="n">fare</span><span class="p">(</span><span class="n">day</span><span class="p">,</span> <span class="n">start_hour</span><span class="p">,</span> <span class="n">start_minute</span><span class="p">,</span> <span class="n">distance</span><span class="p">));</span>
+<span class="p">}</span>
+</code></pre></div>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="as01.html" title="1. Invest, Box, Digits, and Taxi" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                1. Invest, Box, Digits, and Taxi
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="as02.html" title="2. Collatz, Weekday, Circle, Pattern" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                2. Collatz, Weekday, Circle, Pattern
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z" /></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright by Department of Computer Science, National University of Singapore 2018
+          </div>
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="assets/javascripts/vendor.f81b9e8b.min.js"></script>
+      <script src="assets/javascripts/bundle.23546af0.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+      
+      <script>
+        app = initialize({
+          base: ".",
+          features: [],
+          search: Object.assign({
+            worker: "assets/javascripts/worker/search.58d22e8e.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+      
+    
+  </body>
+</html>

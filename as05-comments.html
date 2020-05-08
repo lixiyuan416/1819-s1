@@ -1,0 +1,1822 @@
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <link rel="canonical" href="https://www.comp.nus.edu.sg/~ooiwt/cs1010/1819s1/as05-comments.html">
+      
+      
+      <link rel="shortcut icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1, mkdocs-material-5.1.3">
+    
+    
+      
+        <title>5. Comments and Answer Keys - CS1010 Programming Methodology</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.62d34fff.min.css">
+      
+      
+    
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Gentium+Book+Basic">
+    
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700">
+    
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#assignment-5-comments" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="https://www.comp.nus.edu.sg/~ooiwt/cs1010/1819s1" title="CS1010 Programming Methodology" class="md-header-nav__button md-logo" aria-label="CS1010 Programming Methodology">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12,8A3,3 0 0,0 15,5A3,3 0 0,0 12,2A3,3 0 0,0 9,5A3,3 0 0,0 12,8M12,11.54C9.64,9.35 6.5,8 3,8V19C6.5,19 9.64,20.35 12,22.54C14.36,20.35 17.5,19 21,19V8C17.5,8 14.36,9.35 12,11.54Z" /></svg>
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z" /></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            CS1010 Programming Methodology
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              5. Comments and Answer Keys
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z" /></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z" /></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z" /></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+        
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="https://www.comp.nus.edu.sg/~ooiwt/cs1010/1819s1" title="CS1010 Programming Methodology" class="md-nav__button md-logo" aria-label="CS1010 Programming Methodology">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12,8A3,3 0 0,0 15,5A3,3 0 0,0 12,2A3,3 0 0,0 9,5A3,3 0 0,0 12,8M12,11.54C9.64,9.35 6.5,8 3,8V19C6.5,19 9.64,20.35 12,22.54C14.36,20.35 17.5,19 21,19V8C17.5,8 14.36,9.35 12,11.54Z" /></svg>
+
+    </a>
+    CS1010 Programming Methodology
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="index.html" title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="midterm.html" title="Midterm" class="md-nav__link">
+      Midterm
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      Practical Exams
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Practical Exams" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        Practical Exams
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="pe1.html" title="Info About PE1" class="md-nav__link">
+      Info About PE1
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="pe1-comments.html" title="PE1 Comments and Answers" class="md-nav__link">
+      PE1 Comments and Answers
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="pe2.html" title="Info About PE2" class="md-nav__link">
+      Info About PE2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="pe2-comments.html" title="PE2 Comments and Answers" class="md-nav__link">
+      PE2 Comments and Answers
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      General
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="General" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        General
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="about.html" title="About CS1010" class="md-nav__link">
+      About CS1010
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="outcomes.html" title="Learning Outcomes" class="md-nav__link">
+      Learning Outcomes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="schedule.html" title="Schedule" class="md-nav__link">
+      Schedule
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="accounts.html" title="Accounts" class="md-nav__link">
+      Accounts
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="policies.html" title="Policies" class="md-nav__link">
+      Policies
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      Notes
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Notes" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        Notes
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="01-program.html" title="1. What is a Program?" class="md-nav__link">
+      1. What is a Program?
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="02-algo.html" title="2. Computational Problem & Algorithms" class="md-nav__link">
+      2. Computational Problem &amp; Algorithms
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="03-func.html" title="3. Functions" class="md-nav__link">
+      3. Functions
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="04-type.html" title="4. Types" class="md-nav__link">
+      4. Types
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="05-first-c.html" title="5. First C Program" class="md-nav__link">
+      5. First C Program
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="06-cs1010-io.html" title="6. CS1010 I/O Library" class="md-nav__link">
+      6. CS1010 I/O Library
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="07-arithmetic-ops.html" title="7. Arithmetic Operations" class="md-nav__link">
+      7. Arithmetic Operations
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="08-if-else.html" title="8. If Else" class="md-nav__link">
+      8. If Else
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="09-logical-exp.html" title="9. Logical Expression" class="md-nav__link">
+      9. Logical Expression
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="10-assert.html" title="10. Assertion" class="md-nav__link">
+      10. Assertion
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="11-loop.html" title="11. Loops" class="md-nav__link">
+      11. Loops
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="12-invariant.html" title="12. Reasoning About Loops" class="md-nav__link">
+      12. Reasoning About Loops
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="13-call-stack.html" title="13. Call Stack" class="md-nav__link">
+      13. Call Stack
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="14-pointers.html" title="14. Pointers" class="md-nav__link">
+      14. Pointers
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="15-array.html" title="15. Arrays" class="md-nav__link">
+      15. Arrays
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="16-string.html" title="16. Strings" class="md-nav__link">
+      16. Strings
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="17-call-by-reference.html" title="17. Call by Reference" class="md-nav__link">
+      17. Call by Reference
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="18-heap.html" title="18. Heap" class="md-nav__link">
+      18. Heap
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="19-md-array.html" title="19. Multidimensional Array" class="md-nav__link">
+      19. Multidimensional Array
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="20-macro.html" title="20. C Pre-processing" class="md-nav__link">
+      20. C Pre-processing
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="21-assert.html" title="21. Assert" class="md-nav__link">
+      21. Assert
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="22-efficiency.html" title="22. Efficiency" class="md-nav__link">
+      22. Efficiency
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="23-search.html" title="23. Binary Search" class="md-nav__link">
+      23. Binary Search
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="24-sort.html" title="24. Sorting" class="md-nav__link">
+      24. Sorting
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="25-tower.html" title="25. Tower of Hanoi" class="md-nav__link">
+      25. Tower of Hanoi
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="26-permutation.html" title="26. Permutation" class="md-nav__link">
+      26. Permutation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="27-queens.html" title="27. N Queens" class="md-nav__link">
+      27. N Queens
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="28-struct.html" title="28. Structure" class="md-nav__link">
+      28. Structure
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="29-stdio.html" title="29. stdio" class="md-nav__link">
+      29. stdio
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      Exercises
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Exercises" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        Exercises
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="ex01.html" title="1. Freezer" class="md-nav__link">
+      1. Freezer
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="ex02.html" title="2. Leap, Suffix, Days" class="md-nav__link">
+      2. Leap, Suffix, Days
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="ex03.html" title="3. Binary, Rectangle, Fibonacci, Prime" class="md-nav__link">
+      3. Binary, Rectangle, Fibonacci, Prime
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="ex04.html" title="4. ID, Grade, Index, Max" class="md-nav__link">
+      4. ID, Grade, Index, Max
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="ex05.html" title="5. Square, Escape, Magic" class="md-nav__link">
+      5. Square, Escape, Magic
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7" checked>
+    
+    <label class="md-nav__link" for="nav-7">
+      Assignments
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Assignments" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        Assignments
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="assignment.html" title="General Guide" class="md-nav__link">
+      General Guide
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="as01.html" title="1. Invest, Box, Digits, and Taxi" class="md-nav__link">
+      1. Invest, Box, Digits, and Taxi
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="as01-comments.html" title="1. Comments and Answer Keys" class="md-nav__link">
+      1. Comments and Answer Keys
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="as02.html" title="2. Collatz, Weekday, Circle, Pattern" class="md-nav__link">
+      2. Collatz, Weekday, Circle, Pattern
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="as02-comments.html" title="2. Comments and Answer Keys" class="md-nav__link">
+      2. Comments and Answer Keys
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="as03.html" title="3. Kendall, Histogram, CountingSort" class="md-nav__link">
+      3. Kendall, Histogram, CountingSort
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="as03-comments.html" title="3. Comments and Answer Keys" class="md-nav__link">
+      3. Comments and Answer Keys
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="as04.html" title="4. SelectionSort, Add, Mastermind" class="md-nav__link">
+      4. SelectionSort, Add, Mastermind
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="as04-comments.html" title="4. Comments and Answer Keys" class="md-nav__link">
+      4. Comments and Answer Keys
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="as05.html" title="5. Social, Life" class="md-nav__link">
+      5. Social, Life
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        5. Comments and Answer Keys
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3,9H17V7H3V9M3,13H17V11H3V13M3,17H17V15H3V17M19,17H21V15H19V17M19,7V9H21V7H19M19,13H21V11H19V13Z" /></svg>
+        </span>
+      </label>
+    
+    <a href="as05-comments.html" title="5. Comments and Answer Keys" class="md-nav__link md-nav__link--active">
+      5. Comments and Answer Keys
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#notes-on-marking-schemes" class="md-nav__link">
+    Notes on Marking Schemes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#style" class="md-nav__link">
+    Style
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#documentation" class="md-nav__link">
+    Documentation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#general-mistakes" class="md-nav__link">
+    General Mistakes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#logical-mistakes-bugs" class="md-nav__link">
+    Logical Mistakes (bugs)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#assignment-5-memory-errors" class="md-nav__link">
+    Assignment 5: Memory Errors
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#answer-keys" class="md-nav__link">
+    Answer Keys
+  </a>
+  
+    <nav class="md-nav" aria-label="Answer Keys">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#social" class="md-nav__link">
+    Social
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#life" class="md-nav__link">
+    Life
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="as06.html" title="6. Permutation 1 2 3" class="md-nav__link">
+      6. Permutation 1 2 3
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="as06-comments.html" title="6. Comments and Answer Keys" class="md-nav__link">
+      6. Comments and Answer Keys
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="as07.html" title="7. Peak, Scripts, Inversion" class="md-nav__link">
+      7. Peak, Scripts, Inversion
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="as07-comments.html" title="7. Comments and Answer Keys" class="md-nav__link">
+      7. Comments and Answer Keys
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="as08.html" title="8. Maze, Fill" class="md-nav__link">
+      8. Maze, Fill
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="as08-comments.html" title="8. Comments and Answer Keys" class="md-nav__link">
+      8. Comments and Answer Keys
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="as09.html" title="9. Digits" class="md-nav__link">
+      9. Digits
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="as09-comments.html" title="9. Comments and Answer Keys" class="md-nav__link">
+      9. Comments and Answer Keys
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="quiz.html" title="Quizzes" class="md-nav__link">
+      Quizzes
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9">
+    
+    <label class="md-nav__link" for="nav-9">
+      Kahoot!
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Kahoot!" data-md-level="1">
+      <label class="md-nav__title" for="nav-9">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        Kahoot!
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="kahoot01.html" title="Flow Charts" class="md-nav__link">
+      Flow Charts
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="c-in-cs1010.html" title="C in CS1010" class="md-nav__link">
+      C in CS1010
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="style.html" title="Style Guide" class="md-nav__link">
+      Style Guide
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="documentation.html" title="Documentation Guide" class="md-nav__link">
+      Documentation Guide
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="readings.html" title="Readings" class="md-nav__link">
+      Readings
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-14" type="checkbox" id="nav-14">
+    
+    <label class="md-nav__link" for="nav-14">
+      Software/Tools
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Software/Tools" data-md-level="1">
+      <label class="md-nav__title" for="nav-14">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        Software/Tools
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="environments.html" title="Programming Environments" class="md-nav__link">
+      Programming Environments
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="unix.html" title="UNIX" class="md-nav__link">
+      UNIX
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="clang.html" title="CLang" class="md-nav__link">
+      CLang
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="vim.html" title="Vim" class="md-nav__link">
+      Vim
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="lldb.html" title="LLDB" class="md-nav__link">
+      LLDB
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="library.html" title="CS1010 I/O" class="md-nav__link">
+      CS1010 I/O
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#notes-on-marking-schemes" class="md-nav__link">
+    Notes on Marking Schemes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#style" class="md-nav__link">
+    Style
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#documentation" class="md-nav__link">
+    Documentation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#general-mistakes" class="md-nav__link">
+    General Mistakes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#logical-mistakes-bugs" class="md-nav__link">
+    Logical Mistakes (bugs)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#assignment-5-memory-errors" class="md-nav__link">
+    Assignment 5: Memory Errors
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#answer-keys" class="md-nav__link">
+    Answer Keys
+  </a>
+  
+    <nav class="md-nav" aria-label="Answer Keys">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#social" class="md-nav__link">
+    Social
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#life" class="md-nav__link">
+    Life
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  
+                
+                
+                <h1 id="assignment-5-comments">Assignment 5: Comments</h1>
+<h2 id="notes-on-marking-schemes">Notes on Marking Schemes</h2>
+<ul>
+<li>We apply the penalty to each program independently, i.e., the same mistake repeated in the different program get penalized multiple times.  </li>
+<li>
+<p>You will receive 0 marks if your program cannot be compiled or is plagiarised from another.</p>
+</li>
+<li>
+<p>Code that fails all test cases and showing that student does not understand the basic concepts receives 0 marks straight away.</p>
+</li>
+<li>
+<p>For the rest, we start with full marks and start deducting marks for each error.</p>
+</li>
+<li>
+<p>While the teaching team tries to ensure fair and consistent grading of assignments across all groups, each TA can, at his/her own discretion, and with the approval of Wei Tsang, adjust the grading criteria to align with the messages that they sent to the students in their tutorial group.</p>
+</li>
+</ul>
+<h2 id="style">Style</h2>
+<p>No style marks are allocated for each question, but if you code is hard to understand, not properly indented, use non-descriptive variable names, etc, we will deduct up to 2 marks. </p>
+<p>To be safe, please follow strictly the CS1010 coding standards.</p>
+<h2 id="documentation">Documentation</h2>
+<p>Two marks are allocated for each question. We do not penalize for formatting errors violation in Assignment 5.  If you did not document your function, parameters, return values, or document wrongly (e.g., confused between <code>@param[out]</code> with <code>@return</code>, you will get a deduction of 1 mark.  You get 0 if there is no documentation at all.  </p>
+<p>The following are common formatting errors:</p>
+<ul>
+<li><code>@param</code> command used in a comment that is not attached to a function declaration </li>
+<li><code>@return</code> command used in a comment that is attached to a function returning <code>void</code> </li>
+<li>Parameter name not found in the function declaration.  You should put the name of the variable only, exclude the type, <code>*</code>, <code>[]</code>.</li>
+<li>Putting <code>@param</code> with the parameter name, but no description of what the parameter does.</li>
+<li>Missing <code>[in]</code>, <code>[out]</code>, or <code>[in,out]</code>.  Note that there is no space after <code>,</code> in <code>[in,out]</code>. </li>
+</ul>
+<h2 id="general-mistakes">General Mistakes</h2>
+<p>This penalty applies once per program (not per occurrence).</p>
+<ul>
+<li>-1 for missing type in function declaration or definition</li>
+<li>-1 for using <code>int</code>/<code>long</code> instead of <code>bool</code> for boolean functions or variables</li>
+<li>-1 for using <code>double</code> instead of <code>long</code> when it is not necessary (does not involve integer division).  For instance, using <code>double</code> for <code>invest.c</code> during calculation is ok, using <code>double</code> for calculating the area of the box is not.</li>
+<li>-1 for using of <code>int</code> instead of <code>long</code>.  Using <code>int</code> for this assignment is ok only for <code>day</code>, <code>hour</code>, and <code>minute</code>, where there is an implicit constraint on the range of the value.</li>
+<li>-1 for failing to use parenthesis (e.g., <code>a &amp;&amp; b || c</code>)</li>
+<li>-1 for unnecessary/unused parameters passed into a function</li>
+<li>-1 for unnecessary/unused variables declared</li>
+<li>-1 for not including @author/@group</li>
+<li>-1 for global variables</li>
+<li>-1 for unreachable code / return</li>
+<li>-1 for using <code>==</code> to compare real numbers</li>
+<li>-1 for using variable length array</li>
+<li>-1 for extra elements in the array initializers</li>
+<li>-1 for hardcoding the size of the array, hoping that it is big enough.</li>
+<li>-1 for memory leaks</li>
+</ul>
+<h2 id="logical-mistakes-bugs">Logical Mistakes (bugs)</h2>
+<p>In general, -1 for each bug.</p>
+<ul>
+<li>-1 for each incorrect logical expression</li>
+<li>-1 for each incorrect arithmetic expression</li>
+<li>-1 for each incorrect use of <code>if</code>-<code>else</code></li>
+<li>-1 for each uninitialized variables causing incorrect output.</li>
+<li>-1 if program prints extra text / newline</li>
+<li>-1 if the program returns non-zero from <code>main</code> even if the program exits successfully.</li>
+</ul>
+<h2 id="assignment-5-memory-errors">Assignment 5: Memory Errors</h2>
+<p>Memory leaks are memory errors are especially serious in Assignment 5.  About 70% of you have at least one memory-related bugs.  </p>
+<p>A common error is to allocate a 2D array like this:</p>
+<div class="highlight"><pre><span></span><code><span class="kt">char</span> <span class="o">**</span><span class="n">matrix</span> <span class="o">=</span> <span class="n">calloc</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="kt">char</span> <span class="o">*</span><span class="p">));</span>
+<span class="k">for</span> <span class="p">(</span><span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">m</span><span class="p">;</span> <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span> 
+  <span class="n">matrix</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">calloc</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="kt">char</span><span class="p">));</span>
+  <span class="n">matrix</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">cs1010_read_word</span><span class="p">();</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>Note that here you are reassigning <code>matrix[i]</code> that originally points to the memory region returned by <code>calloc</code> to the memory returned by <code>cs1010_read_word</code>.  The memory returned by <code>calloc</code> is now unreachable and cannot be free.</p>
+<p>After using <code>matrix</code>, you should free them </p>
+<div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="p">(</span><span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">m</span><span class="p">;</span> <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span> 
+  <span class="n">free</span><span class="p">(</span><span class="n">matrix</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+<span class="p">}</span>
+<span class="n">free</span><span class="p">(</span><span class="n">matrix</span><span class="p">);</span>
+</code></pre></div>
+
+<p>Another common memory error is the failure to consider the terminating null character in the allocation of string.  If your string is of size <span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span>, then you need to allocate <span><span class="MathJax_Preview">n+1</span><script type="math/tex">n+1</script></span> characters for the string.</p>
+<h2 id="answer-keys">Answer Keys</h2>
+<h3 id="social">Social</h3>
+<p>This is not meant to be a hard question.  There is a similar question (where <span><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> is infinity and the array is not jagged) appeared in the final exam of CS1010 Semester 2 AY17/18.  Unexpectedly, many students struggled with it as a programming assignment.  </p>
+<p>There are several issues with most submissions I read.  First, many students did not separate out the representation (using a jagged array) from the operation (checking if two person is a friend).  This is despite a similar question is asked in Problem 19.2.</p>
+<p>If you do not write a function similar to <code>dist</code> from Problem 19.2, to check if two person is a friend, then the complexity of your solution increases significantly, as you have to deal with looping through the right column or the right row.  Many bugs occur due to students forgetting to consider scanning through a row or a column.  It is easier if you write a function that looks like the following:</p>
+<div class="highlight"><pre><span></span><code><span class="kt">bool</span> <span class="nf">is_friend</span><span class="p">(</span><span class="kt">char</span> <span class="o">**</span><span class="n">network</span><span class="p">,</span> <span class="kt">int</span> <span class="n">i</span><span class="p">,</span> <span class="kt">int</span> <span class="n">j</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">if</span> <span class="p">(</span><span class="n">i</span> <span class="o">&gt;=</span> <span class="n">j</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="n">network</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">==</span> <span class="n">FRIEND</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="k">return</span> <span class="n">network</span><span class="p">[</span><span class="n">j</span><span class="p">][</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="n">FRIEND</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>Then you no longer have to worry about whether to traverse by row or by column!</p>
+<p>With the issue of how to access a jagged array out of the way, let's focus on how to find the <span><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span>-hop friendships among the people.  </p>
+<p>Some of you tried to employ complicated methods (using recursion and advanced CS2040/C concepts such as breadth-first-search or depth-first-search) to find the <span><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span>-hop friendships directly.  If you managed to do it, then bravo, you have learned something beyond CS1010 and are one step ahead of your peers!  But I actually did not expect students to do this.  My approach, as usual, is to break down the problem into smaller ones that we can solve.  So let's try to find a 2-hop friendship first.  How can we build the social network of 2-hop friendship?  If two person <span><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> and <span><span class="MathJax_Preview">j</span><script type="math/tex">j</script></span> are not yet connected, we find a third person <span><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span> who is a mutual friend between the two of them.  If we can find such a third person <span><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span>, then <span><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> and <span><span class="MathJax_Preview">j</span><script type="math/tex">j</script></span> are a 2-hop friend.  We can do something like this:</p>
+<div class="highlight"><pre><span></span><code><span class="kt">char</span> <span class="nf">is_connected</span><span class="p">(</span><span class="kt">long</span> <span class="n">n</span><span class="p">,</span> <span class="kt">char</span> <span class="o">**</span><span class="n">degree_one</span><span class="p">,</span> <span class="kt">long</span> <span class="n">i</span><span class="p">,</span> <span class="kt">long</span> <span class="n">j</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">m</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">m</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="n">m</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">is_friend</span><span class="p">(</span><span class="n">degree_one</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">m</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="n">is_friend</span><span class="p">(</span><span class="n">degree_one</span><span class="p">,</span> <span class="n">m</span><span class="p">,</span> <span class="n">j</span><span class="p">))</span> <span class="p">{</span>
+      <span class="k">return</span> <span class="n">FRIEND</span><span class="p">;</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+  <span class="k">return</span> <span class="n">STRANGER</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>(I have #defined <code>FRIEND</code> to be <code>'1'</code> and <code>STRANGER</code> to be <code>'0'</code>)</p>
+<p>Now we can just loop through every pair <span><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> and <span><span class="MathJax_Preview">j</span><script type="math/tex">j</script></span> 
+<div class="highlight"><pre><span></span><code><span class="kt">void</span> <span class="nf">compute_degree_2</span><span class="p">(</span><span class="kt">long</span> <span class="n">n</span><span class="p">,</span> <span class="kt">char</span> <span class="o">**</span><span class="n">degree_one</span><span class="p">,</span> <span class="kt">char</span> <span class="o">**</span><span class="n">degree_two</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;=</span> <span class="n">i</span><span class="p">;</span> <span class="n">j</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">if</span> <span class="p">(</span><span class="n">is_friend</span><span class="p">(</span><span class="n">degree_one</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">))</span> <span class="p">{</span>
+        <span class="n">degree_two</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">FRIEND</span><span class="p">;</span>
+      <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="n">degree_two</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">is_connected</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">degree_one</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">);</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<p>There is an important point in the code above, we need to store the resulting network in a new 2D array (I called it <code>degree_two</code>) instead of updating the network in place:</p>
+<div class="highlight"><pre><span></span><code>  <span class="c1">// not like this</span>
+  <span class="n">degree_one</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">is_connected</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">degree_one</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">);</span>
+</code></pre></div>
+
+<p>Some students stored the results back into the original 2D array, and as a result get the wrong output.  This is the same for the next question <code>life</code> -- but it is easier to visualize and see the bug in <code>life</code>.</p>
+<p>And now we have constructed the social network of two hops.  How do we construct a network of three hops?  Well, a 3-hop relationship means that there must be someone <span><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span>, who is a 1-hop friend of <span><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> and 2-hop friend of <span><span class="MathJax_Preview">j</span><script type="math/tex">j</script></span>.  We can make this more general: a <span><span class="MathJax_Preview">h</span><script type="math/tex">h</script></span>-hop relationship means that there must be someone <span><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span> who is a 1-hop friend of <span><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> and (<span><span class="MathJax_Preview">h-1</span><script type="math/tex">h-1</script></span>)-hop friend of <span><span class="MathJax_Preview">j</span><script type="math/tex">j</script></span>.</p>
+<p>We can thus modify <code>compute_degree_2</code> to <code>compute_degree_h</code>, making the code more general.</p>
+<div class="highlight"><pre><span></span><code><span class="cm">/**</span>
+<span class="cm"> * Checks if i and j has a common friend</span>
+<span class="cm"> * @param[in] n The number of users</span>
+<span class="cm"> * @param[in] degree_one The 1-hop friendship information</span>
+<span class="cm"> * @param[in] degree_h The h-hop friendship information</span>
+<span class="cm"> * @param[in] i A user</span>
+<span class="cm"> * @param[in] j Another user</span>
+<span class="cm"> * @return FRIEND if i and j has a (h+1)-hop connection, STRANGER otherwise.</span>
+<span class="cm"> */</span>
+<span class="kt">char</span> <span class="nf">is_connected</span><span class="p">(</span><span class="kt">long</span> <span class="n">n</span><span class="p">,</span> <span class="kt">char</span> <span class="o">**</span><span class="n">degree_one</span><span class="p">,</span> <span class="kt">char</span> <span class="o">**</span><span class="n">degree_h_minus_1</span><span class="p">,</span> <span class="kt">long</span> <span class="n">i</span><span class="p">,</span> <span class="kt">long</span> <span class="n">j</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">m</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">m</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="n">m</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">is_friend</span><span class="p">(</span><span class="n">degree_one</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">m</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="n">is_friend</span><span class="p">(</span><span class="n">degree_h_minus_1</span><span class="p">,</span> <span class="n">m</span><span class="p">,</span> <span class="n">j</span><span class="p">))</span> <span class="p">{</span>
+      <span class="k">return</span> <span class="n">FRIEND</span><span class="p">;</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+  <span class="k">return</span> <span class="n">STRANGER</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="cm">/**</span>
+<span class="cm"> * Computers the h-hop friendship for the whole network.</span>
+<span class="cm"> * @param[in] n          The number of users.</span>
+<span class="cm"> * @param[in] degree_one The 1-hop friendship network</span>
+<span class="cm"> * @param[in] degree_h_minus_1   The (h-1)-hop friendship network</span>
+<span class="cm"> * @param[out] degree_h   The h-hop friendship network</span>
+<span class="cm"> */</span>
+<span class="kt">void</span> <span class="nf">compute_degree_h</span><span class="p">(</span><span class="kt">long</span> <span class="n">n</span><span class="p">,</span> <span class="kt">char</span> <span class="o">**</span><span class="n">degree_one</span><span class="p">,</span> <span class="kt">char</span> <span class="o">**</span><span class="n">degree_h_minus_1</span><span class="p">,</span> <span class="kt">char</span> <span class="o">**</span><span class="n">degree_h</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;=</span> <span class="n">i</span><span class="p">;</span> <span class="n">j</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">if</span> <span class="p">(</span><span class="n">is_friend</span><span class="p">(</span><span class="n">degree_h_minus_1</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">))</span> <span class="p">{</span>
+        <span class="n">degree_h</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">FRIEND</span><span class="p">;</span>
+      <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="n">degree_h</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">is_connected</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">degree_one</span><span class="p">,</span> <span class="n">degree_h_minus_1</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">);</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>Note that we need three 2D arrays now, one storing (<span><span class="MathJax_Preview">h-1</span><script type="math/tex">h-1</script></span>)-hop friendship, one storing 1-hop friendship, and one more to store the newly computed <span><span class="MathJax_Preview">h</span><script type="math/tex">h</script></span>-hop friendship.  Once we finish computed the <span><span class="MathJax_Preview">h</span><script type="math/tex">h</script></span>-hop friendship, we do not need the array storing <span><span class="MathJax_Preview">(h-1)</span><script type="math/tex">(h-1)</script></span>-hop friendship anymore and we can deallocate it (or better still, reuse it for <span><span class="MathJax_Preview">h+1</span><script type="math/tex">h+1</script></span>-hop).</p>
+<p>Finally, we are ready to calculate the <span><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span>-hop friendship:</p>
+<div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">h</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">h</span> <span class="o">&lt;</span> <span class="n">k</span><span class="p">;</span> <span class="n">h</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+  <span class="n">compute_degree_h</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">degree_one</span><span class="p">,</span> <span class="n">degree_h_minus_1</span><span class="p">,</span> <span class="n">degree_h</span><span class="p">);</span>
+  <span class="n">swap</span><span class="p">(</span><span class="o">&amp;</span><span class="n">degree_h_minus_1</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">degree_h</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>The call to <code>swap</code> is how we put the results of <span><span class="MathJax_Preview">h</span><script type="math/tex">h</script></span>-hop friendship into the array <code>degree_h_minus_1</code>, getting ready to be read for the next loop, and get the 2D array <code>degree_h</code> ready to store new results for the next loop.</p>
+<h3 id="life">Life</h3>
+<p>Most students do not have any problem solving <code>life</code>.   The most common bugs are memory-related, which we have explained above.  The gist of the solution to <code>life</code> falls on the three functions below:</p>
+<div class="highlight"><pre><span></span><code><span class="cm">/**</span>
+<span class="cm"> * Count the number of neighbors that is alive.</span>
+<span class="cm"> *</span>
+<span class="cm"> * @param[in] universe The game of life universe</span>
+<span class="cm"> * @param[in] i The row coordinate of the current cell whose</span>
+<span class="cm"> *              neighbors we are counting.</span>
+<span class="cm"> * @param[in] j The column coordinate of the current cell whose</span>
+<span class="cm"> *              neighbors we are counting.</span>
+<span class="cm"> * @return The number of live neighbors.</span>
+<span class="cm"> */</span>
+<span class="kt">int</span> <span class="nf">count_live_neighbor</span><span class="p">(</span><span class="kt">char</span> <span class="o">**</span><span class="n">universe</span><span class="p">,</span> <span class="kt">long</span> <span class="n">i</span><span class="p">,</span> <span class="kt">long</span> <span class="n">j</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kt">long</span> <span class="n">count</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+  <span class="k">for</span> <span class="p">(</span><span class="kt">long</span> <span class="n">x</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span> <span class="n">x</span> <span class="o">&lt;=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">x</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kt">long</span> <span class="n">y</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span> <span class="n">y</span> <span class="o">&lt;=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">y</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">if</span> <span class="p">(</span><span class="n">x</span> <span class="o">!=</span> <span class="mi">0</span> <span class="o">||</span> <span class="n">y</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">is_alive</span><span class="p">(</span><span class="n">universe</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="n">x</span><span class="p">][</span><span class="n">j</span><span class="o">+</span><span class="n">y</span><span class="p">]))</span> <span class="p">{</span>
+          <span class="n">count</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">;</span>
+        <span class="p">}</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+  <span class="k">return</span> <span class="n">count</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="cm">/**</span>
+<span class="cm"> * Update the cell (i, j) in the universe.</span>
+<span class="cm"> *</span>
+<span class="cm"> * @param[in] universe The game of life universe</span>
+<span class="cm"> * @param[in] i The row coordinate of the current cell we are updating</span>
+<span class="cm"> * @param[in] j The column coordinate of the current cell we are updating</span>
+<span class="cm"> * @return The new status of the cell (DEAD or LIVE)</span>
+<span class="cm"> */</span>
+<span class="kt">char</span> <span class="nf">update_cell</span><span class="p">(</span><span class="kt">char</span> <span class="o">**</span><span class="n">universe</span><span class="p">,</span> <span class="kt">long</span> <span class="n">i</span><span class="p">,</span> <span class="kt">long</span> <span class="n">j</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kt">int</span> <span class="n">live_neighbor_count</span> <span class="o">=</span> <span class="n">count_live_neighbor</span><span class="p">(</span><span class="n">universe</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">);</span>
+  <span class="k">if</span> <span class="p">(</span><span class="n">is_alive</span><span class="p">(</span><span class="n">universe</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]))</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">live_neighbor_count</span> <span class="o">&lt;</span> <span class="mi">2</span> <span class="o">||</span> <span class="n">live_neighbor_count</span> <span class="o">&gt;</span> <span class="mi">3</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">return</span> <span class="n">DEAD</span><span class="p">;</span>
+    <span class="p">}</span>
+  <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">live_neighbor_count</span> <span class="o">==</span> <span class="mi">3</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">return</span> <span class="n">LIVE</span><span class="p">;</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+  <span class="k">return</span> <span class="n">universe</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">];</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="cm">/**</span>
+<span class="cm"> * Simulate one step of the game of life.</span>
+<span class="cm"> *</span>
+<span class="cm"> * @param[in] nrows The number of rows</span>
+<span class="cm"> * @param[in] ncols The number of columns</span>
+<span class="cm"> * @param[in] universe The curr game of life universe</span>
+<span class="cm"> * @param[out] new_universe The updated game of life universe</span>
+<span class="cm"> */</span>
+<span class="kt">void</span> <span class="nf">simulate_game</span><span class="p">(</span><span class="kt">long</span> <span class="n">nrows</span><span class="p">,</span> <span class="kt">long</span> <span class="n">ncols</span><span class="p">,</span> <span class="kt">char</span> <span class="o">**</span><span class="n">universe</span><span class="p">,</span> <span class="kt">char</span> <span class="o">**</span><span class="n">next_universe</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">for</span> <span class="p">(</span><span class="kt">long</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">nrows</span><span class="o">-</span><span class="mi">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kt">long</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">ncols</span><span class="o">-</span><span class="mi">1</span><span class="p">;</span> <span class="n">j</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+      <span class="n">next_universe</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">update_cell</span><span class="p">(</span><span class="n">universe</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">);</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="as05.html" title="5. Social, Life" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                5. Social, Life
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="as06.html" title="6. Permutation 1 2 3" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                6. Permutation 1 2 3
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z" /></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright by Department of Computer Science, National University of Singapore 2018
+          </div>
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="assets/javascripts/vendor.f81b9e8b.min.js"></script>
+      <script src="assets/javascripts/bundle.23546af0.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+      
+      <script>
+        app = initialize({
+          base: ".",
+          features: [],
+          search: Object.assign({
+            worker: "assets/javascripts/worker/search.58d22e8e.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+      
+    
+  </body>
+</html>
